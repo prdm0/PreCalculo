@@ -1,8 +1,12 @@
 output_dir: "docs"
-new_session: yes
-delete_merged_file: yes
-
 book_filename: "aulas_markdown"
-language:
-  ui:
-    chapter_name: ""
+
+rmd_files: [
+  "index.Rmd",
+  "01-conjuntos.Rmd",
+  "02-funcoes.Rmd",
+  "03-method.Rmd",
+  "04-application.Rmd",
+  "05-summary.Rmd",
+  "06-references.Rmd",
+]
