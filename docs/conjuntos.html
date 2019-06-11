@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html >
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 Conjuntos | Um curso de pré-cálculo</title>
-  <meta name="description" content="Pré-Cálculo">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="Pré-Cálculo" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 Conjuntos | Um curso de pré-cálculo" />
   <meta property="og:type" content="book" />
@@ -22,13 +21,13 @@
   <meta name="twitter:description" content="Pré-Cálculo" />
   
 
-<meta name="author" content="Prof. Dr. Claudio Javier Tablada">
+<meta name="author" content="Prof. Dr. Claudio Javier Tablada" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
 <link rel="prev" href="index.html">
@@ -78,7 +77,14 @@
 <li class="chapter" data-level="1.8" data-path="conjuntos.html"><a href="conjuntos.html#uniao-e-intersecao-de-conjuntos"><i class="fa fa-check"></i><b>1.8</b> União e interseção de conjuntos</a></li>
 <li class="chapter" data-level="1.9" data-path="conjuntos.html"><a href="conjuntos.html#complementar-de-um-conjunto"><i class="fa fa-check"></i><b>1.9</b> Complementar de um conjunto</a></li>
 <li class="chapter" data-level="1.10" data-path="conjuntos.html"><a href="conjuntos.html#diferenca-de-conjuntos"><i class="fa fa-check"></i><b>1.10</b> Diferença de conjuntos</a></li>
-<li class="chapter" data-level="1.11" data-path="conjuntos.html"><a href="conjuntos.html#exercicios"><i class="fa fa-check"></i><b>1.11</b> Exercícios</a></li>
+<li class="chapter" data-level="1.11" data-path="conjuntos.html"><a href="conjuntos.html#conjuntos-numericos"><i class="fa fa-check"></i><b>1.11</b> Conjuntos numéricos</a><ul>
+<li class="chapter" data-level="1.11.1" data-path="conjuntos.html"><a href="conjuntos.html#conjunto-dos-numeros-naturais"><i class="fa fa-check"></i><b>1.11.1</b> Conjunto dos números naturais</a></li>
+<li class="chapter" data-level="1.11.2" data-path="conjuntos.html"><a href="conjuntos.html#conjunto-dos-numeros-inteiros"><i class="fa fa-check"></i><b>1.11.2</b> Conjunto dos números inteiros</a></li>
+<li class="chapter" data-level="1.11.3" data-path="conjuntos.html"><a href="conjuntos.html#conjunto-dos-numeros-racionais"><i class="fa fa-check"></i><b>1.11.3</b> Conjunto dos números racionais</a></li>
+<li class="chapter" data-level="1.11.4" data-path="conjuntos.html"><a href="conjuntos.html#conjunto-dos-numeros-irracionais"><i class="fa fa-check"></i><b>1.11.4</b> Conjunto dos números irracionais</a></li>
+<li class="chapter" data-level="1.11.5" data-path="conjuntos.html"><a href="conjuntos.html#conjunto-dos-numeros-reais"><i class="fa fa-check"></i><b>1.11.5</b> Conjunto dos números reais</a></li>
+</ul></li>
+<li class="chapter" data-level="1.12" data-path="conjuntos.html"><a href="conjuntos.html#exercicios"><i class="fa fa-check"></i><b>1.12</b> Exercícios</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="funcoes.html"><a href="funcoes.html"><i class="fa fa-check"></i><b>2</b> Funções</a><ul>
 <li class="chapter" data-level="2.1" data-path="funcoes.html"><a href="funcoes.html#par-ordenado"><i class="fa fa-check"></i><b>2.1</b> Par ordenado</a></li>
@@ -236,7 +242,7 @@ You can write citations, too. For example, we are using the **bookdown** package
 </ul>
 <p>Muitas vezes, a resposta a nosso problema depende do conjunto universo que estamos considerando.</p>
 <p>Exemplo:</p>
-<p>Qual é o conjunto dos pontos <span class="math inline">\(P\)</span> que ficam a igual distância de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> ?</p>
+<p>Qual é o conjunto dos pontos <span class="math inline">\(P\)</span> que ficam a igual distância dos pontos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> ?</p>
 <p>Se consideramos o conjunto universal <span class="math inline">\(U\)</span> como sendo a reta que contém os pontos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, então o conjunto <span class="math inline">\(P\)</span> dos pontos equidistantes de <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> está formado por um único ponto, como mostra a seguinte figura:</p>
 <p> </p>
 <p><img src="conj02.png" width="40%" style="display: block; margin: auto;" /></p>
@@ -374,14 +380,231 @@ Observe que a definição de complementar depende do conjunto universo considera
 <p><img src="conj08.png" width="50%" style="display: block; margin: auto;" /></p>
 <p> </p>
 <p>A <em>diferença simétrica</em> entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é definida como o conjunto formado pelos elementos que estão em <span class="math inline">\(A\cup B\)</span> e que não estão em <span class="math inline">\(A\cap B\)</span>:</p>
-<p><span class="math display">\[A\Delta B = (A\cup B) - (A\cap B) = (A\cup B)\cap (A\cap B)^\mathrm{c}\]</span></p>
+<p><span class="math display">\[A\Delta B = (A\cup B) - (A\cap B) = (A\cup B)\cap (A\cap B)^\mathrm{c}=(A-B)\cup(B-A)\]</span></p>
 <p> </p>
 <p><img src="conj09.png" width="50%" style="display: block; margin: auto;" /></p>
 <p> </p>
 <p>Operações de conjuntos envolvendo uniões, interseções, complementares e diferênças são chamadas de <em>operações boleanas de conjuntos</em>.</p>
 </div>
+<div id="conjuntos-numericos" class="section level2">
+<h2><span class="header-section-number">1.11</span> Conjuntos numéricos</h2>
+<div id="conjunto-dos-numeros-naturais" class="section level3">
+<h3><span class="header-section-number">1.11.1</span> Conjunto dos números naturais</h3>
+<p>O conjunto <span class="math inline">\(\mathbb{N}=\{1,2,3,4,5,\ldots\}\)</span> é chamado conjunto dos números naturais e é denotado por <span class="math inline">\(\mathbb{N}\)</span>. É o conjunto que possui o <span class="math inline">\(1\)</span> e todos os seus sucessores.</p>
+</div>
+<div id="conjunto-dos-numeros-inteiros" class="section level3">
+<h3><span class="header-section-number">1.11.2</span> Conjunto dos números inteiros</h3>
+<p>O conjunto <span class="math inline">\(\mathbb{Z}=\{\ldots,-4, -3, -2, -1,0,1,2,3,4,\ldots\}\)</span> é chamado conjunto dos números inteiros e é denotado por <span class="math inline">\(\mathbb{Z}\)</span>. Esse conjunto é a extensão dos números naturais, acrescentando os elementos negativos e o zero.</p>
+</div>
+<div id="conjunto-dos-numeros-racionais" class="section level3">
+<h3><span class="header-section-number">1.11.3</span> Conjunto dos números racionais</h3>
+<p>O conjunto dos números racionais é denotado por <span class="math inline">\(\mathbb{Q}\)</span>. Um elemento de <span class="math inline">\(\mathbb{Q}\)</span> é da forma <span class="math inline">\(\displaystyle\frac{a}{b}\)</span>, em que <span class="math inline">\(a,b\in\mathbb{Z}\)</span> e <span class="math inline">\(b\neq0\)</span>, ou seja</p>
+<p><span class="math display">\[\mathbb{Q}=\{\displaystyle\frac{a}{b}\ :\ a,b\in\mathbb{Z},\ b\neq0\}\]</span></p>
+</div>
+<div id="conjunto-dos-numeros-irracionais" class="section level3">
+<h3><span class="header-section-number">1.11.4</span> Conjunto dos números irracionais</h3>
+<p>O conjunto dos números irracionais é denotado por <span class="math inline">\(\mathbb{I}\)</span>, e está formado por todos os números que não pertencem a <span class="math inline">\(\mathbb{Q}\)</span>, ou seja</p>
+<p><span class="math display">\[\mathbb{I}=\{x\ :\ x\not\in\mathbb{Q}\}\]</span>
+Um exemplo de número irracional é <span class="math inline">\(\sqrt{2}\)</span>. De fato, pode-se provar que não existem <span class="math inline">\(a,b\in\mathbb{Z},\ b\neq0\)</span>, tal que <span class="math inline">\(\sqrt{2}=\displaystyle\frac{a}{b}\)</span>. Para provar isso, suponha pelo absurdo que <span class="math inline">\(\sqrt{2}=\displaystyle\frac{a}{b}\)</span>, em que <span class="math inline">\(\displaystyle\frac{a}{b}\in\mathbb{Q}\)</span> é irredutível (a fração já está reduzida a sua mínima expressão). Assim,</p>
+<p><span class="math display">\[\sqrt{2}=\displaystyle\frac{a}{b}\]</span>
+Elevando ao quadrado ambos os membros, obtemos que
+<span class="math display">\[2 = \left(\displaystyle\frac{a}{b}\right)^2\]</span>
+<span class="math display">\[2b^2=a^2\]</span>
+Logo <span class="math inline">\(a^2\)</span> é par, o qual implica que <span class="math inline">\(a\)</span> é par, ou seja, <span class="math inline">\(a=2m\)</span> para algúm <span class="math inline">\(m\in\mathbb{Z}\)</span> (exercício 19). Sendo assim,</p>
+<p><span class="math display">\[2b^2=(2m)^2=4m^2\]</span>
+<span class="math display">\[b^2=2m^2\]</span>
+o qual implica que <span class="math inline">\(b\)</span> é par, ou seja, <span class="math inline">\(b=2n\)</span>, para algúm <span class="math inline">\(n\in\mathbb{Z}\)</span>.
+Portanto
+<span class="math display">\[\displaystyle\frac{a}{b}=\frac{2m}{2n}=\frac{m}{n}\]</span>
+O anterior contradiz o fato que <span class="math inline">\(\displaystyle\frac{a}{b}\)</span> é irredutível. Concluímos então que <span class="math inline">\(\sqrt{2}\not\in\mathbb{Q}\)</span>, ou seja, <span class="math inline">\(\sqrt{2}\in\mathbb{I}\)</span>.</p>
+<p>Outros exemplos de números irracionais são:</p>
+<ul>
+<li><span class="math inline">\(\sqrt{p}\)</span>, em que <span class="math inline">\(p\)</span> é um numero primo.</li>
+<li><span class="math inline">\(\pi=3,141592\ldots\)</span>.</li>
+<li><span class="math inline">\({\rm e}=2,718281\ldots\)</span></li>
+</ul>
+</div>
+<div id="conjunto-dos-numeros-reais" class="section level3">
+<h3><span class="header-section-number">1.11.5</span> Conjunto dos números reais</h3>
+<p>O conjunto dos números reais, denotado por <span class="math inline">\(\mathbb{R}\)</span>, é definido como <span class="math inline">\(\mathbb{R}=\mathbb{Q}\cup\mathbb{I}\)</span>. Esse conjunto é munido de duas operações, a <em>adição</em> <span class="math inline">\((+)\)</span>, a <em>multiplicação</em> <span class="math inline">\((\cdot)\)</span> e uma relação de ordem <span class="math inline">\((\leq)\)</span>. Para <span class="math inline">\(a,b,c\in\mathbb{R}\)</span>, as operações de adição e multiplicação e a relação de ordem possuem as seguintes propriedades:</p>
+<p>(A1) <em>Associatividade da adição</em>: <span class="math inline">\(a+(b+c)=(a+b)+c\)</span></p>
+<p>(A2) <em>Comutatividade da adição</em>: <span class="math inline">\(a+b=b+a\)</span></p>
+<p>(A3) <em>Elemento neutro da adição</em>: existe <span class="math inline">\(0\in\mathbb{R}\)</span> tal que para todo <span class="math inline">\(a\in\mathbb{R}\)</span>, <span class="math inline">\(0+a=a+0=a\)</span></p>
+<p>(A4) <em>Inverso aditivo</em>: para todo <span class="math inline">\(a\in\mathbb{R}\)</span>, existe um <span class="math inline">\(b\in\mathbb{R}\)</span> tal que <span class="math inline">\(a+b=b+a=0\)</span></p>
+<p>(M1) <em>Associatividade da multiplicação</em>: <span class="math inline">\(a\cdot(b\cdot c)=(a\cdot b)\cdot c\)</span></p>
+<p>(M2) <em>Comutatividade da adição</em>: <span class="math inline">\(a\cdot b=b\cdot a\)</span></p>
+<p>(M3) <em>Elemento neutro da multiplicação</em>: existe <span class="math inline">\(1\neq0\)</span> tal que para todo <span class="math inline">\(a\in\mathbb{R}\)</span>, <span class="math inline">\(1\cdot a=a\cdot 1=a\)</span></p>
+<p>(M4) <em>Inverso multiplicativo</em>: para todo <span class="math inline">\(a\in\mathbb{R}\)</span>, existe um <span class="math inline">\(b\in\mathbb{R}\)</span> tal que <span class="math inline">\(a\cdot b=b\cdot a=1\)</span></p>
+<p>(O1) <em>Reflexão</em>: <span class="math inline">\(a\leq a\)</span></p>
+<p>(O2) <em>Antissimetria</em>: <span class="math inline">\(a\leq b\ \)</span> e <span class="math inline">\(\ b\leq a\ \)</span> <span class="math inline">\(\ \Rightarrow\ \)</span> <span class="math inline">\(\ a=b\)</span></p>
+<p>(O3) <em>Transitividade</em>: <span class="math inline">\(a\leq b\ \)</span> e <span class="math inline">\(\ b\leq c\ \)</span> <span class="math inline">\(\ \Rightarrow\ \)</span> <span class="math inline">\(\ a\leq c\)</span></p>
+<p>(O4) <em>Tricotomia</em>: <span class="math inline">\(a&lt;b\ \)</span> ou <span class="math inline">\(\ a=b\ \)</span> ou <span class="math inline">\(\ a&gt;b\)</span></p>
+<p>(O5) <em>Consistência com respeito a adição</em>: <span class="math inline">\(a\leq b\ \)</span> <span class="math inline">\(\ \Rightarrow\ \)</span> <span class="math inline">\(\ a+c\leq b+c\)</span></p>
+<p>(O6) <em>Consistência com respeito a multiplicação</em>: se <span class="math inline">\(\ c&gt;0\ \)</span>, então <span class="math inline">\(\ a\leq b\ \)</span> <span class="math inline">\(\ \Rightarrow\ \)</span> <span class="math inline">\(\ a\cdot c\leq b\cdot c\)</span></p>
+<p>(D1) <em>Distributividade</em>: <span class="math inline">\(a\cdot(b+c)=a\cdot b + a\cdot c=b\cdot a + c\cdot a = (b+c)\cdot a\)</span></p>
+</div>
+</div>
 <div id="exercicios" class="section level2">
-<h2><span class="header-section-number">1.11</span> Exercícios</h2>
+<h2><span class="header-section-number">1.12</span> Exercícios</h2>
+<ol style="list-style-type: decimal">
+<li>Descreva os seguintes conjuntos por meio de uma propriedade dos elementos:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(A=\{+1, -1, +2, -2, +3, -3, +6, -6 \}\)</span></li>
+<li><span class="math inline">\(B=\{0, -10, -20, -30, -40, \cdots \}\)</span></li>
+<li><span class="math inline">\(C=\{1, 4, 9, 16, 25, 36, \cdots \}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Quais dos conjuntos abaixo são vazios?</li>
+</ol>
+<ul>
+<li><span class="math inline">\(A=\{x\ |\ 0 \cdot x = 0 \}\)</span></li>
+<li><span class="math inline">\(B=\{x\ |\ x &gt; \displaystyle\frac{9}{4}\  \mbox{e} \  x &lt; \displaystyle\frac{6}{5}\}\)</span></li>
+<li><span class="math inline">\(C=\{x\ |\ x \  \mbox{é divisor de zero}\}\)</span></li>
+<li><span class="math inline">\(D=\{x\ |\ x \ \mbox{é divisível por zero} \}\)</span></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Construa o conjunto das partes do conjunto <span class="math inline">\(A= \{a, b, c, d \}\)</span>.</p></li>
+<li><p>Diga se é verdadeira (V) ou falsa (F) cada uma das sentenças abaixo. Se a sentença for falsa deverá ser justificada.</p></li>
+</ol>
+<ul>
+<li><span class="math inline">\(0 \in \{0, 1, 2, 3, 4\}\)</span></li>
+<li><span class="math inline">\(\{a\} \in \{a, b\}\)</span></li>
+<li><span class="math inline">\(\emptyset \in \{ 0\}\)</span></li>
+<li><span class="math inline">\(0 \in \emptyset\)</span></li>
+<li><span class="math inline">\(\{a\}\subset \emptyset\)</span></li>
+<li><span class="math inline">\(a \in \{a, \{a\}\}\)</span></li>
+<li><span class="math inline">\(\{a\} \subset \{a, \{a\}\}\)</span></li>
+<li><span class="math inline">\(\emptyset \subset \{\emptyset, \{a\}\}\)</span></li>
+<li><span class="math inline">\(\emptyset \in \{\emptyset, \{a\}\}\)</span></li>
+<li><span class="math inline">\(\{a,b\} \in \{\{a,b,c,d \}\}\)</span></li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Dados os conjuntos <span class="math inline">\(A = \{a,b,c, d\}\)</span>, <span class="math inline">\(B = \{b,c,d,e\}\)</span> e <span class="math inline">\(C = \{c, e, f\}\)</span>, determine <span class="math inline">\(A\cap B\)</span>, <span class="math inline">\(A\cap C\)</span>, <span class="math inline">\(B\cap C\)</span> e <span class="math inline">\(A\cap B\cap C\)</span>, <span class="math inline">\(A\cup B\)</span>, <span class="math inline">\(A\cup C\)</span>, <span class="math inline">\(B\cup C\)</span> e <span class="math inline">\(A\cup B\cup C\)</span>. Verifique também se cada união é disjunta.</p></li>
+<li><p>Prove que <span class="math inline">\(A\subset (A\cup B)\)</span>, <span class="math inline">\((A\cap B)\subset A\)</span> e que <span class="math inline">\((A-B)\subset A\)</span>, para todo conjunto <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</p></li>
+<li><p>Admitindo que <span class="math inline">\(A,B\)</span> e <span class="math inline">\(C\)</span> são conjuntos quaisquer, classifique em verdadeiro (V) ou falso (F) as seguintes sentenças:</p></li>
+</ol>
+<ul>
+<li><span class="math inline">\(\emptyset \subset (A \cup B)\)</span></li>
+<li><span class="math inline">\((A\cup B) \subset A\)</span></li>
+<li><span class="math inline">\(A \supset (A \cup B)\)</span></li>
+<li><span class="math inline">\((A \cup B) \subset (A \cup B)\)</span></li>
+<li><span class="math inline">\(B \subset (A\cup B)\)</span></li>
+<li><span class="math inline">\((A\cup B)\subset (A \cup B \cup C)\)</span></li>
+<li><span class="math inline">\(\emptyset \subset (A\cap B)\)</span></li>
+<li><span class="math inline">\(A \subset (A\cap B)\)</span></li>
+<li><span class="math inline">\(A \in (A\cap B)\)</span></li>
+<li><span class="math inline">\((A\cap B) \subset (A \cap B)\)</span></li>
+<li><span class="math inline">\((A\cap B) \subset B\)</span></li>
+<li><span class="math inline">\((A\cap B) \supset (A \cap B \cap C)\)</span></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>Indique no diagrama abaixo, um de cada vez, os seguintes conjuntos:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(A\cap B \cap C\)</span></li>
+<li><span class="math inline">\(A\cap (B \cup C)\)</span></li>
+<li><span class="math inline">\(A\cup (B \cap C)\)</span></li>
+<li><span class="math inline">\(A\cup (B \cup C)\)</span></li>
+</ul>
+<p> </p>
+<p><img src="exc08.png" width="50%" style="display: block; margin: auto;" /></p>
+<p> </p>
+<ol start="9" style="list-style-type: decimal">
+<li>Sejam os conjuntos <span class="math inline">\(A = \{a,b,c,d\}\)</span>, <span class="math inline">\(B=\{c,d,e,f,g\}\)</span> e <span class="math inline">\(C = \{b,d,e,g\}\)</span>. determine:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(A-B\)</span></li>
+<li><span class="math inline">\(B-A\)</span></li>
+<li><span class="math inline">\(C-B\)</span></li>
+<li><span class="math inline">\((A\cup C) - B\)</span></li>
+<li><span class="math inline">\(A - (B \cap C)\)</span></li>
+<li><span class="math inline">\((A \cup B) - (A \cap C)\)</span></li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
+<li>Faça um diagrama para indicar cada um dos conjuntos abaixo:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(A^c-B\)</span></li>
+<li><span class="math inline">\(B^c \cup A\)</span></li>
+<li><span class="math inline">\((A\cup B)^c\)</span></li>
+<li><span class="math inline">\((A\cap B)^c\)</span></li>
+<li><span class="math inline">\(B^c \cap A\)</span></li>
+<li><span class="math inline">\(A^c - (A\cup B)\)</span></li>
+</ul>
+<ol start="11" style="list-style-type: decimal">
+<li><p>Sejam A e B dois conjuntos finitos. Prove que
+<span class="math display">\[n_{A \cup B} = n_{A} + n_{B} - n_{A\cap B},\]</span>
+em que o símbolo <span class="math inline">\(n_X\)</span> representa o número de elementos do conjunto <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Uma pesquisa de mercado foi realizada para investigar sobre a preferência de três marcas de sabão em pó (<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>) entre potenciais consumidores. Os resultados coletados estão apresentados na tabela abaixo:
+</p></li>
+</ol>
+<p> </p>
+<p><img src="tabela.png" width="115%" style="display: block; margin: auto;" /></p>
+<p> </p>
+<p>Forneça:</p>
+<ul>
+<li>o número de pessoas consultadas;</li>
+<li>o número de pessoas que só consomem a marca A;</li>
+<li>o número de pessoas que não consomem as marcas A ou C;</li>
+<li>o número de pessoas que consomem ao menos duas marcas.</li>
+</ul>
+<ol start="13" style="list-style-type: decimal">
+<li>Em uma certa comunidade há indivíduos de três etnias: branca, negra e amarela. Sabendo que 70 são brancos, 350 são não negros e 50<span class="math inline">\(\%\)</span> são amarelos, responda:</li>
+</ol>
+<ul>
+<li>quantos indivíduos tem essa comunidade?</li>
+<li>quantos são os indivíduos amarelos?</li>
+</ul>
+<ol start="14" style="list-style-type: decimal">
+<li>Dados dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, chama-se a diferença simétrica de <span class="math inline">\(A\)</span> com <span class="math inline">\(B\)</span> o conjunto tal que:
+<span class="math display">\[A\bigtriangleup B = (A-B) \cup (B-A).\]</span></li>
+</ol>
+<ul>
+<li>Prove que <span class="math inline">\(A \bigtriangleup \emptyset = A.\)</span></li>
+<li>Prove que <span class="math inline">\(A \bigtriangleup A = \emptyset\)</span></li>
+<li>Prove que <span class="math inline">\(A \bigtriangleup B = B \bigtriangleup A\)</span>, para <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> quaisquer.</li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li>Sejam <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span> três conjuntos quaisquer. Demonstre que</li>
+</ol>
+<ul>
+<li><span class="math inline">\((A-C) \cup (B-C) = (A\cup B)-C\)</span>.</li>
+<li><span class="math inline">\((A-C) \cap (B-C) = (A\cap B)-C\)</span>.</li>
+</ul>
+<ol start="16" style="list-style-type: decimal">
+<li><p>Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos quaisquer. Demonstre que <span class="math inline">\(A\)</span> e <span class="math inline">\(B-A\)</span> são disjuntos, e que <span class="math inline">\(A \cup B= A\cup (B-A)\)</span>. Isso mostra como representar <span class="math inline">\(A \cup B\)</span> como uma união disjunta.</p></li>
+<li><p>Prove que se <span class="math inline">\(a,b,c\)</span> e <span class="math inline">\(d\)</span> são racionais, <span class="math inline">\(p\)</span> é primo positivo e <span class="math inline">\(a+ b\cdot\sqrt{p} = c+ d\cdot \sqrt{p}\)</span>, então <span class="math inline">\(a=c\)</span> e <span class="math inline">\(b=d\)</span>.</p></li>
+<li><p>Dados dois números <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> reais e positivos, chama-se <em>média aritmética</em> de <span class="math inline">\(x\)</span> com <span class="math inline">\(y\)</span> o real <span class="math inline">\(m=\displaystyle\frac{x+y}{2}\)</span> e chama-se <em>média geométrica</em> o real <span class="math inline">\(g=\sqrt{xy}\)</span>. Mostre que <span class="math inline">\(m\geq g\)</span> para todos <span class="math inline">\(x,y \in \mathbb{R}_{&gt;0}\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\(a\)</span> um número inteiro. Prove que</p></li>
+</ol>
+<ul>
+<li>se <span class="math inline">\(a\)</span> for ímpar, então <span class="math inline">\(a^2\)</span> também será ímpar;</li>
+<li>se <span class="math inline">\(a^2\)</span> for par, então <span class="math inline">\(a\)</span> também será par.</li>
+</ul>
+<ol start="20" style="list-style-type: decimal">
+<li>Represente sobre a reta real cada um dos seguintes conjuntos:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(A = \{ x \in \mathbb{R}\ |\ 1\leqslant x \leqslant 2\}\)</span></li>
+<li><span class="math inline">\(B = \{ x \in \mathbb{R}\ |\ 0&lt; x &lt; 3\}\)</span></li>
+<li><span class="math inline">\(C = \{ x \in \mathbb{R}\ |\ x\leqslant 0 \  \mbox{ou}\  x &gt; 2\}\)</span></li>
+<li><span class="math inline">\(D= \{ x \in \mathbb{R}\ |\ -1&lt; x \leqslant 0 \  \mbox{ou}\  x\geqslant 3 \}\)</span></li>
+</ul>
+<ol start="21" style="list-style-type: decimal">
+<li>Descreva os seguintes conjuntos:</li>
+</ol>
+<ul>
+<li><span class="math inline">\([0,2]\cap [1,3]\)</span></li>
+<li><span class="math inline">\([0,2]\cap (1,3)\)</span></li>
+<li><span class="math inline">\((-\infty,2) \cap [0, + \infty]\)</span></li>
+<li><span class="math inline">\((-1, 3) \cup [0,4]\)</span></li>
+<li><span class="math inline">\((-2, 1) \cup [0,5]\)</span></li>
+<li><span class="math inline">\(\left[-\displaystyle\frac{1}{2}, 0\right) \cup \left(-\displaystyle\frac{3}{2}, -\displaystyle\frac{1}{4} \right]\)</span></li>
+</ul>
+<ol start="22" style="list-style-type: decimal">
+<li>Determine a interseção entre os conjuntos <span class="math inline">\(\mathbb{R} \cap \mathbb{Q}\)</span>, <span class="math inline">\((\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ \)</span> e <span class="math inline">\(\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})\)</span>.</li>
+</ol>
 
 </div>
 </div>

@@ -86,7 +86,7 @@ Muitas vezes, a resposta a nosso problema depende do conjunto universo que estam
 
 Exemplo: 
 
-Qual é o conjunto dos pontos $P$ que ficam a igual distância de $A$ e $B$ ? 
+Qual é o conjunto dos pontos $P$ que ficam a igual distância dos pontos $A$ e $B$ ? 
 
 Se consideramos o conjunto universal $U$ como sendo a reta que contém os pontos $A$ e $B$, então o conjunto $P$ dos pontos equidistantes de $A$ e $B$ está formado por um único ponto, como mostra a seguinte figura:
 
@@ -291,7 +291,7 @@ knitr::include_graphics('conj08.png')
 
 A *diferença simétrica* entre $A$ e $B$ é definida como o conjunto formado pelos elementos que estão em $A\cup B$ e que não estão em $A\cap B$:
 
-$$A\Delta B = (A\cup B) - (A\cap B) = (A\cup B)\cap (A\cap B)^\mathrm{c}$$
+$$A\Delta B = (A\cup B) - (A\cap B) = (A\cup B)\cap (A\cap B)^\mathrm{c}=(A-B)\cup(B-A)$$
 
 &nbsp;
 
@@ -303,4 +303,237 @@ knitr::include_graphics('conj09.png')
 
 Operações de conjuntos envolvendo uniões, interseções, complementares e diferênças são chamadas de *operações boleanas de conjuntos*.
 
+
+## Conjuntos numéricos
+
+### Conjunto dos números naturais
+
+O conjunto $\mathbb{N}=\{1,2,3,4,5,\ldots\}$ é chamado conjunto dos números naturais e é denotado por $\mathbb{N}$. É o conjunto que possui o $1$ e todos os seus sucessores.
+
+### Conjunto dos números inteiros
+
+O conjunto $\mathbb{Z}=\{\ldots,-4, -3, -2, -1,0,1,2,3,4,\ldots\}$ é chamado conjunto dos números inteiros e é denotado por $\mathbb{Z}$. Esse conjunto é a extensão dos números naturais, acrescentando os elementos negativos e o zero.
+
+### Conjunto dos números racionais
+
+O conjunto dos números racionais é denotado por $\mathbb{Q}$. Um elemento de $\mathbb{Q}$ é da forma $\displaystyle\frac{a}{b}$, em que $a,b\in\mathbb{Z}$ e $b\neq0$, ou seja
+
+$$\mathbb{Q}=\{\displaystyle\frac{a}{b}\ :\ a,b\in\mathbb{Z},\ b\neq0\}$$
+
+### Conjunto dos números irracionais
+
+O conjunto dos números irracionais é denotado por $\mathbb{I}$, e está formado por todos os números que não pertencem a $\mathbb{Q}$, ou seja
+
+$$\mathbb{I}=\{x\ :\ x\not\in\mathbb{Q}\}$$
+Um exemplo de número irracional é $\sqrt{2}$. De fato, pode-se provar que não existem $a,b\in\mathbb{Z},\ b\neq0$, tal que $\sqrt{2}=\displaystyle\frac{a}{b}$. Para provar isso, suponha pelo absurdo que $\sqrt{2}=\displaystyle\frac{a}{b}$, em que $\displaystyle\frac{a}{b}\in\mathbb{Q}$ é irredutível (a fração já está reduzida a sua mínima expressão). Assim,
+
+$$\sqrt{2}=\displaystyle\frac{a}{b}$$
+Elevando ao quadrado ambos os membros, obtemos que 
+$$2 = \left(\displaystyle\frac{a}{b}\right)^2$$
+$$2b^2=a^2$$
+Logo $a^2$ é par, o qual implica que $a$ é par, ou seja, $a=2m$ para algúm $m\in\mathbb{Z}$ (exercício 19). Sendo assim,
+
+$$2b^2=(2m)^2=4m^2$$
+$$b^2=2m^2$$
+o qual implica que $b$ é par, ou seja, $b=2n$, para algúm $n\in\mathbb{Z}$.
+Portanto
+$$\displaystyle\frac{a}{b}=\frac{2m}{2n}=\frac{m}{n}$$
+O anterior contradiz o fato que $\displaystyle\frac{a}{b}$ é irredutível. Concluímos então que $\sqrt{2}\not\in\mathbb{Q}$, ou seja, $\sqrt{2}\in\mathbb{I}$.
+
+Outros exemplos de números irracionais são: 
+
+- $\sqrt{p}$, em que $p$ é um numero primo.
+- $\pi=3,141592\ldots$.
+- ${\rm e}=2,718281\ldots$
+
+### Conjunto dos números reais
+
+O conjunto dos números reais, denotado por $\mathbb{R}$, é definido como $\mathbb{R}=\mathbb{Q}\cup\mathbb{I}$. Esse conjunto é munido de duas operações, a *adição* $(+)$, a *multiplicação* $(\cdot)$ e uma relação de ordem $(\leq)$. Para $a,b,c\in\mathbb{R}$, as operações de adição e multiplicação e a relação de ordem possuem as seguintes propriedades:
+
+(A1) *Associatividade da adição*: $a+(b+c)=(a+b)+c$
+
+(A2) *Comutatividade da adição*: $a+b=b+a$
+
+(A3) *Elemento neutro da adição*: existe $0\in\mathbb{R}$ tal que para todo $a\in\mathbb{R}$, $0+a=a+0=a$
+
+(A4) *Inverso aditivo*: para todo $a\in\mathbb{R}$, existe um $b\in\mathbb{R}$ tal que $a+b=b+a=0$
+
+(M1) *Associatividade da multiplicação*: $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
+
+(M2) *Comutatividade da adição*: $a\cdot b=b\cdot a$
+
+(M3) *Elemento neutro da multiplicação*: existe $1\neq0$ tal que para todo $a\in\mathbb{R}$, $1\cdot a=a\cdot 1=a$
+
+(M4) *Inverso multiplicativo*: para todo $a\in\mathbb{R}$, existe um $b\in\mathbb{R}$ tal que $a\cdot b=b\cdot a=1$
+
+(O1) *Reflexão*: $a\leq a$
+
+(O2) *Antissimetria*: $a\leq b\ $ e $\ b\leq a\ $ $\ \Rightarrow\ $  $\ a=b$
+
+(O3) *Transitividade*: $a\leq b\ $ e $\ b\leq c\ $ $\ \Rightarrow\ $ $\ a\leq c$
+
+(O4) *Tricotomia*: $a<b\ $ ou $\ a=b\ $ ou $\ a>b$
+
+(O5) *Consistência com respeito a adição*: $a\leq b\ $ $\ \Rightarrow\ $ $\ a+c\leq b+c$
+
+(O6) *Consistência com respeito a multiplicação*: se $\ c>0\ $, então $\ a\leq b\ $ $\ \Rightarrow\ $ $\ a\cdot c\leq b\cdot c$
+
+(D1) *Distributividade*: $a\cdot(b+c)=a\cdot b + a\cdot c=b\cdot a + c\cdot a = (b+c)\cdot a$
+
+
+
 ## Exercícios
+
+1. Descreva os seguintes conjuntos por meio de uma propriedade dos elementos:
+
+
+- $A=\{+1, -1, +2, -2, +3, -3, +6, -6 \}$
+- $B=\{0, -10, -20, -30, -40, \cdots \}$ 
+- $C=\{1, 4, 9, 16, 25, 36, \cdots \}$
+
+2. Quais dos conjuntos abaixo são vazios?
+
+- $A=\{x\ |\ 0 \cdot x = 0 \}$
+- $B=\{x\ |\ x > \displaystyle\frac{9}{4}\  \mbox{e} \  x < \displaystyle\frac{6}{5}\}$ 
+- $C=\{x\ |\ x \  \mbox{é divisor de zero}\}$ 
+- $D=\{x\ |\ x \ \mbox{é divisível por zero} \}$ 
+
+3. Construa o conjunto das partes do conjunto $A= \{a, b, c, d \}$.
+
+4. Diga se é verdadeira (V) ou falsa (F) cada uma das sentenças abaixo. Se a sentença for falsa deverá ser justificada.
+
+- $0 \in \{0, 1, 2, 3, 4\}$
+- $\{a\} \in \{a, b\}$ 
+- $\emptyset \in \{ 0\}$
+- $0 \in \emptyset$
+- $\{a\}\subset \emptyset$
+- $a \in \{a, \{a\}\}$
+- $\{a\} \subset \{a, \{a\}\}$
+- $\emptyset \subset \{\emptyset, \{a\}\}$
+- $\emptyset \in \{\emptyset, \{a\}\}$
+- $\{a,b\} \in \{\{a,b,c,d \}\}$
+
+5. Dados os conjuntos $A = \{a,b,c, d\}$, $B = \{b,c,d,e\}$ e $C = \{c, e, f\}$, determine $A\cap B$, $A\cap C$, $B\cap C$ e $A\cap B\cap C$,  $A\cup B$, $A\cup C$, $B\cup C$ e $A\cup B\cup C$. Verifique também se cada união é disjunta.
+
+6. Prove que $A\subset (A\cup B)$, $(A\cap B)\subset A$ e que $(A-B)\subset A$, para todo conjunto $A$ e $B$.
+
+7. Admitindo que $A,B$ e $C$ são conjuntos quaisquer, classifique em verdadeiro (V) ou falso (F) as seguintes sentenças:
+
+- $\emptyset \subset (A \cup B)$ 
+- $(A\cup B) \subset A$
+- $A \supset (A \cup B)$
+- $(A \cup B) \subset (A \cup B)$
+- $B \subset (A\cup B)$
+- $(A\cup B)\subset (A \cup B \cup C)$
+- $\emptyset \subset (A\cap B)$
+- $A \subset (A\cap B)$
+- $A \in (A\cap B)$
+- $(A\cap B) \subset (A \cap B)$
+- $(A\cap B) \subset B$
+- $(A\cap B) \supset (A \cap B \cap C)$
+
+8. Indique no diagrama abaixo, um de cada vez, os seguintes conjuntos:
+
+- $A\cap B \cap C$
+- $A\cap (B \cup C)$
+- $A\cup (B \cap C)$
+- $A\cup (B \cup C)$
+
+&nbsp;
+
+```{r exc08, echo=FALSE, fig.cap="", out.width='50%', fig.align="center"}
+knitr::include_graphics('exc08.png')
+```
+
+&nbsp;
+
+9. Sejam os conjuntos $A = \{a,b,c,d\}$, $B=\{c,d,e,f,g\}$ e $C = \{b,d,e,g\}$. determine:
+
+- $A-B$
+- $B-A$
+- $C-B$
+- $(A\cup C) - B$
+- $A - (B \cap C)$
+- $(A \cup B) - (A \cap C)$
+
+10. Faça um diagrama para indicar cada um dos conjuntos abaixo:
+
+- $A^c-B$
+- $B^c \cup A$
+- $(A\cup B)^c$
+- $(A\cap B)^c$
+- $B^c \cap A$
+- $A^c - (A\cup B)$
+
+11. Sejam A e B dois conjuntos finitos. Prove que
+$$n_{A \cup B} = n_{A} + n_{B} - n_{A\cap B},$$
+em que o símbolo $n_X$ representa o número de elementos do conjunto $X$.
+
+12. Uma pesquisa de mercado foi realizada para investigar sobre a preferência de três marcas de sabão em pó ($A$, $B$ e $C$) entre potenciais consumidores. Os resultados coletados estão apresentados na tabela abaixo:
+\vspace*{0.7cm}
+
+&nbsp;
+
+```{r exc12, echo=FALSE, fig.cap="", out.width='115%', fig.align="center"}
+knitr::include_graphics('tabela.png')
+```
+
+&nbsp;
+
+Forneça:
+
+- o número de pessoas consultadas;
+- o número de pessoas que só consomem a marca A;
+- o número de pessoas que não consomem as marcas A ou C;
+- o número de pessoas que consomem ao menos duas marcas.
+
+
+13. Em uma certa comunidade há indivíduos de três etnias: branca, negra e amarela. Sabendo que 70 são brancos, 350 são não negros e 50$\%$ são amarelos, responda:
+
+- quantos indivíduos tem essa comunidade?
+- quantos são os indivíduos amarelos?
+
+14. Dados dois conjuntos $A$ e $B$, chama-se a diferença simétrica de $A$ com $B$ o conjunto tal que:
+ $$A\bigtriangleup B = (A-B) \cup (B-A).$$
+ 
+- Prove que $A \bigtriangleup \emptyset = A.$
+- Prove que $A \bigtriangleup A = \emptyset$
+- Prove que $A \bigtriangleup B = B \bigtriangleup A$, para $A$ e $B$ quaisquer.
+
+
+15. Sejam $A$, $B$ e $C$ três conjuntos quaisquer. Demonstre que
+
+- $(A-C) \cup (B-C) = (A\cup B)-C$.
+- $(A-C) \cap (B-C) = (A\cap B)-C$.
+
+
+16. Sejam $A$ e $B$ conjuntos quaisquer. Demonstre que $A$ e $B-A$ são disjuntos, e que $A \cup B= A\cup (B-A)$. Isso mostra como representar $A \cup B$ como uma união disjunta.
+
+17. Prove que se $a,b,c$ e $d$ são racionais, $p$ é primo positivo e $a+ b\cdot\sqrt{p} = c+ d\cdot \sqrt{p}$, então $a=c$ e $b=d$.
+
+18. Dados  dois números $x$ e $y$ reais e positivos, chama-se *média aritmética* de $x$ com $y$ o real $m=\displaystyle\frac{x+y}{2}$ e chama-se *média geométrica* o real $g=\sqrt{xy}$. Mostre que $m\geq g$ para todos $x,y \in \mathbb{R}_{>0}$.
+
+19. Seja $a$ um número inteiro. Prove que
+
+- se $a$ for ímpar, então $a^2$ também será ímpar;
+- se $a^2$ for par, então $a$ também será par. 
+
+
+20. Represente sobre a reta real cada um dos seguintes conjuntos:
+
+- $A = \{ x \in \mathbb{R}\ |\ 1\leqslant x \leqslant 2\}$
+- $B = \{ x \in \mathbb{R}\ |\ 0< x < 3\}$
+- $C = \{ x \in \mathbb{R}\ |\ x\leqslant 0 \  \mbox{ou}\  x > 2\}$
+- $D= \{ x \in \mathbb{R}\ |\ -1< x \leqslant 0 \   \mbox{ou}\  x\geqslant 3 \}$
+
+21. Descreva os seguintes conjuntos:
+
+- $[0,2]\cap [1,3]$
+- $[0,2]\cap (1,3)$
+- $(-\infty,2) \cap [0, + \infty]$
+- $(-1, 3) \cup [0,4]$
+- $(-2, 1) \cup [0,5]$
+- $\left[-\displaystyle\frac{1}{2}, 0\right) \cup \left(-\displaystyle\frac{3}{2}, -\displaystyle\frac{1}{4} \right]$
+
+
+22. Determine a interseção entre os conjuntos $\mathbb{R} \cap \mathbb{Q}$, $(\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ $ e $\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})$. 
