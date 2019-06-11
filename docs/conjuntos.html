@@ -373,17 +373,31 @@ Observe que a definição de complementar depende do conjunto universo considera
 </div>
 <div id="diferenca-de-conjuntos" class="section level2">
 <h2><span class="header-section-number">1.10</span> Diferença de conjuntos</h2>
-<p>Dados dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, a <em>diferênça</em> entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto formado pelos elementos de <span class="math inline">\(A\)</span> que não estão em <span class="math inline">\(B\)</span>:</p>
+<p>Dados dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, a <em>diferença</em> entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é o conjunto formado pelos elementos de <span class="math inline">\(A\)</span> que não estão em <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[A-B = \{x\ |\ x\in A \mbox{ e } x\not\in B\}\]</span></p>
 <p>Pode-se provar que <span class="math inline">\(A-B = A\cap B^\mathrm{c}\)</span>.</p>
 <p> </p>
 <p><img src="conj08.png" width="50%" style="display: block; margin: auto;" /></p>
 <p> </p>
+<p>Exemplos:</p>
+<ul>
+<li><span class="math inline">\(\{a,b\}-\{b,c,d\}=\{a\}\)</span></li>
+<li><span class="math inline">\(\{a,b\}-\{c,d,e\}=\{a,b\}\)</span></li>
+<li><span class="math inline">\(\{a,b\}-\emptyset=\{a,b\}\)</span></li>
+<li><span class="math inline">\(\{a,b\}-\{a,b,c,d\}=\emptyset\)</span></li>
+</ul>
 <p>A <em>diferença simétrica</em> entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> é definida como o conjunto formado pelos elementos que estão em <span class="math inline">\(A\cup B\)</span> e que não estão em <span class="math inline">\(A\cap B\)</span>:</p>
 <p><span class="math display">\[A\Delta B = (A\cup B) - (A\cap B) = (A\cup B)\cap (A\cap B)^\mathrm{c}=(A-B)\cup(B-A)\]</span></p>
 <p> </p>
 <p><img src="conj09.png" width="50%" style="display: block; margin: auto;" /></p>
 <p> </p>
+<p>Exemplos:</p>
+<ul>
+<li><span class="math inline">\(\{a,b,c\}\Delta \{c,d,e\}=\{a,b,d,e\}\)</span></li>
+<li><span class="math inline">\(\{a,b\}\Delta\{c,d\}=\{a,b,c,d\}\)</span></li>
+<li><span class="math inline">\(\{a,b\}\Delta\{a,b,c,d\}=\{c,d\}\)</span></li>
+<li><span class="math inline">\(\{a,b\}\Delta\{a,b\}=\emptyset\)</span></li>
+</ul>
 <p>Operações de conjuntos envolvendo uniões, interseções, complementares e diferênças são chamadas de <em>operações boleanas de conjuntos</em>.</p>
 </div>
 <div id="conjuntos-numericos" class="section level2">
@@ -575,6 +589,7 @@ em que o símbolo <span class="math inline">\(n_X\)</span> representa o número 
 <ol start="16" style="list-style-type: decimal">
 <li><p>Sejam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> conjuntos quaisquer. Demonstre que <span class="math inline">\(A\)</span> e <span class="math inline">\(B-A\)</span> são disjuntos, e que <span class="math inline">\(A \cup B= A\cup (B-A)\)</span>. Isso mostra como representar <span class="math inline">\(A \cup B\)</span> como uma união disjunta.</p></li>
 <li><p>Prove que se <span class="math inline">\(a,b,c\)</span> e <span class="math inline">\(d\)</span> são racionais, <span class="math inline">\(p\)</span> é primo positivo e <span class="math inline">\(a+ b\cdot\sqrt{p} = c+ d\cdot \sqrt{p}\)</span>, então <span class="math inline">\(a=c\)</span> e <span class="math inline">\(b=d\)</span>.</p></li>
+<li><p>Dados os conjuntos <span class="math inline">\(A=\{1,2,3,4,5\}\)</span>, <span class="math inline">\(B=\{1,2,4,6,8\}\)</span>, e <span class="math inline">\(C=\{2,4,5,7\}\)</span>, obter um conjunto <span class="math inline">\(X\)</span> tal que <span class="math inline">\(A-X=B\cap C\)</span>.</p></li>
 <li><p>Dados dois números <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> reais e positivos, chama-se <em>média aritmética</em> de <span class="math inline">\(x\)</span> com <span class="math inline">\(y\)</span> o real <span class="math inline">\(m=\displaystyle\frac{x+y}{2}\)</span> e chama-se <em>média geométrica</em> o real <span class="math inline">\(g=\sqrt{xy}\)</span>. Mostre que <span class="math inline">\(m\geq g\)</span> para todos <span class="math inline">\(x,y \in \mathbb{R}_{&gt;0}\)</span>.</p></li>
 <li><p>Seja <span class="math inline">\(a\)</span> um número inteiro. Prove que</p></li>
 </ol>

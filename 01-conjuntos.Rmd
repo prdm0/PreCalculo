@@ -274,7 +274,7 @@ Em particular, temos que
 
 ## Diferença de conjuntos
 
-Dados dois conjuntos $A$ e $B$, a *diferênça* entre $A$ e $B$ é o conjunto formado pelos elementos de $A$ que não estão em $B$:
+Dados dois conjuntos $A$ e $B$, a *diferença* entre $A$ e $B$ é o conjunto formado pelos elementos de $A$ que não estão em $B$:
 
 $$A-B = \{x\ |\ x\in A \mbox{ e } x\not\in B\}$$
 
@@ -288,6 +288,13 @@ knitr::include_graphics('conj08.png')
 
 &nbsp;
 
+Exemplos:
+
+- $\{a,b\}-\{b,c,d\}=\{a\}$
+- $\{a,b\}-\{c,d,e\}=\{a,b\}$
+- $\{a,b\}-\emptyset=\{a,b\}$
+- $\{a,b\}-\{a,b,c,d\}=\emptyset$
+
 
 A *diferença simétrica* entre $A$ e $B$ é definida como o conjunto formado pelos elementos que estão em $A\cup B$ e que não estão em $A\cap B$:
 
@@ -300,6 +307,14 @@ knitr::include_graphics('conj09.png')
 ```
 
 &nbsp;
+
+Exemplos:
+
+- $\{a,b,c\}\Delta \{c,d,e\}=\{a,b,d,e\}$
+- $\{a,b\}\Delta\{c,d\}=\{a,b,c,d\}$
+- $\{a,b\}\Delta\{a,b,c,d\}=\{c,d\}$
+- $\{a,b\}\Delta\{a,b\}=\emptyset$
+
 
 Operações de conjuntos envolvendo uniões, interseções, complementares e diferênças são chamadas de *operações boleanas de conjuntos*.
 
@@ -511,6 +526,8 @@ Forneça:
 
 17. Prove que se $a,b,c$ e $d$ são racionais, $p$ é primo positivo e $a+ b\cdot\sqrt{p} = c+ d\cdot \sqrt{p}$, então $a=c$ e $b=d$.
 
+18. Dados os conjuntos $A=\{1,2,3,4,5\}$, $B=\{1,2,4,6,8\}$, e $C=\{2,4,5,7\}$, obter um conjunto $X$ tal que $A-X=B\cap C$.
+
 18. Dados  dois números $x$ e $y$ reais e positivos, chama-se *média aritmética* de $x$ com $y$ o real $m=\displaystyle\frac{x+y}{2}$ e chama-se *média geométrica* o real $g=\sqrt{xy}$. Mostre que $m\geq g$ para todos $x,y \in \mathbb{R}_{>0}$.
 
 19. Seja $a$ um número inteiro. Prove que
@@ -536,4 +553,4 @@ Forneça:
 - $\left[-\displaystyle\frac{1}{2}, 0\right) \cup \left(-\displaystyle\frac{3}{2}, -\displaystyle\frac{1}{4} \right]$
 
 
-22. Determine a interseção entre os conjuntos $\mathbb{R} \cap \mathbb{Q}$, $(\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ $ e $\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})$. 
+22. Determine a interseção entre os conjuntos $\mathbb{R} \cap \mathbb{Q}$, $(\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ $ e $\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})$.
