@@ -318,6 +318,30 @@ Exemplos:
 
 Operações de conjuntos envolvendo uniões, interseções, complementares e diferênças são chamadas de *operações boleanas de conjuntos*.
 
+## Leis de De Morgan
+
+Dados dois conjuntos $A$ e $B$, as leis de De Morgan são dadas pelas seguintes igualdades:
+
+$$(A\cup B)^c = A^c\cap B^c$$
+$$(A\cap B)^c = A^c\cup B^c$$
+Omitiremos a prova deste resultado, mas o leitor pode se convencer disso fazendo os diagramas de Venn correspondentes.
+
+Usando indução finita (veremos mais adiante), podemos extender as leis de De Morgan para o caso de $n$ conjuntos ($n>2$).
+
+Dados $n$ conjuntos $A_1, A_2,\ldots,A_n$, é comum denotar a união deles na seguinte forma:
+
+$$\bigcup_{i=1}^{n}A_i = A_1\cup A_2\cup\ldots\cup A_n$$
+
+A interseção dos $n$ conjuntos pode-se escrever, de forma resumida, como
+
+$$\bigcap_{i=1}^{n}A_i = A_1\cap A_2\cap\ldots\cap A_n$$
+
+As leis de De Morgan podem ser enunciadas, considerando $n$ conjuntos, como
+
+$$\left(\bigcup_{i=1}^{n}A_i\right)^c = \bigcap_{i=1}^{n}A_i^c$$
+$$\left(\bigcap_{i=1}^{n}A_i\right)^c = \bigcup_{i=1}^{n}A_i^c$$
+
+As leis de De Morgan podem ser parafraseadas como: *o complementar da união é igual à interseção dos complementares* e *o complementar da interseção é igual à união dos complementares*.
 
 ## Conjuntos numéricos
 
@@ -325,15 +349,114 @@ Operações de conjuntos envolvendo uniões, interseções, complementares e dif
 
 O conjunto $\mathbb{N}=\{1,2,3,4,5,\ldots\}$ é chamado conjunto dos números naturais e é denotado por $\mathbb{N}$. É o conjunto que possui o $1$ e todos os seus sucessores.
 
+Neste conjunto são definidas duas operações fundamentais, a adição e a multiplicação. Para todo $a,b,c\in\mathbb{N}$, essas operações apresentam as seguintes propriedades:
+
+(A1) *Associatividade da adição*: $a+(b+c)=(a+b)+c$
+
+(A2) *Comutatividade da adição*: $a+b=b+a$
+
+(A3) *Elemento neutro da adição*: existe $0\in\mathbb{R}$ tal que para todo $a\in\mathbb{R}$, $0+a=a+0=a$
+
+(M1) *Associatividade da multiplicação*: $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
+
+(M2) *Comutatividade da multiplicação*: $a\cdot b=b\cdot a$
+
+(M3) *Elemento neutro da multiplicação*: existe $1\neq0$ tal que para todo $a\in\mathbb{R}$, $1\cdot a=a\cdot 1=a$
+
+(D1) *Distributividade*: $a\cdot(b+c)=a\cdot b + a\cdot c=b\cdot a + c\cdot a = (b+c)\cdot a$
+
+
+Observar que dado $a\in\mathbb{N}$, não podemos definir em $\mathbb{N}$ o simétrico $-a$, ou seja, não podemos definir em $\mathbb{N}$ a operação inversa da adição (a subtração). Assim, estende-se o conjunto dos naturais ao conjunto dos inteiros.  
+
 ### Conjunto dos números inteiros
 
 O conjunto $\mathbb{Z}=\{\ldots,-4, -3, -2, -1,0,1,2,3,4,\ldots\}$ é chamado conjunto dos números inteiros e é denotado por $\mathbb{Z}$. Esse conjunto é a extensão dos números naturais, acrescentando os elementos negativos e o zero.
+
+No conjunto $\mathbb{Z}$ são definidas também as operações de adição e multiplicação que apresentam, além das propriedades (A1), (A2), (A3), (M1), (M2), (M3) e (D1), a seguinte propriedade:
+
+(A4) *simétrico ou oposto para a adição*: para todo $a\in\mathbb{Z}$, existe $-a\in\mathbb{Z}$ tal que $a+(-a)=(-a)+a=0$
+
+Para quaisquer elementos $a,b\in\mathbb{Z}$, escrevemos $a+(-b)=a-b$.
+
+Um conceito importante no conjunto $\mathbb{Z}$ é o de *divisor*.
+
+Dizemos que o inteiro $a$ é *divisor* do inteiro $b$ quando existe um inteiro $c$ tal que $ca=b$. Em símbolos:
+
+$$a\,|\,b\ \Longleftrightarrow\ \exists\ c\in\mathbb{Z}\ \mbox{ tal que }\ ca=b$$
+Exemplos:
+
+- $2\,|\, 6\ $ pois $\ 3\cdot 2=6$
+- $3\,| -18\ $ pois $\ (-6)\cdot 3=-18$
+- $-2\,|-14\ $ pois $\ 7\cdot (-2)=-14$
+- $3\,|\,0\ $ pois $\ 0\cdot 3=0$
+- $0\,|\,0\ $ pois $\ 1\cdot 0=0$
+
+Se $a$ é divisor de $b$, dizemos que $b$ é *múltiplo* de $a$ ou que $b$ é *divisível* por $a$.
+
+Exemplos:
+
+- O conjunto dos divisores de $2$: $\ \{1,-1,2,-2\}$
+- O conjunto dos divisores de $-5$: $\ \{1,-1,5,-5\}$
+- O conjunto dos divisores de $8$ : $\ \{1,-1,2,-2,4,-4\}$
+- O conjunto dos divisores de $0$: $\ \mathbb{Z}$
+- O conjunto dos múltiplos de $2$: $\ \{0, \pm 2, \pm 4, \pm 6,\ldots\}=\{x\in\mathbb{Z}\ :\ x=\pm2m,\ m\in\mathbb{Z}\}$
+- O conjunto dos múltiplos de $-5$: $\ \{0, \pm 5, \pm 10, \pm 15,\ldots\}=\{x\in\mathbb{Z}\ :\ x=\pm 5m,\ m\in\mathbb{Z}\}$
+- O conjunto dos múltiplos de $0$: $\ \{0\}$
+
+Dizemos que um número inteiro $p$ é primo se $p\neq0,1,-1$ e o conjunto dos divisores de $p$ é dado por $\{1,-1,p,-p\}$.
+
+Exemplo: os inteiros $2,-2,3,-3,5,-5,7,-7,11,-11,13,-13$ são primos.
+
+Dado $a\in\mathbb{Z}$, denotemos o conjunto dos divisores de $a$ por $D(a)$ e o conjunto dos múltiplos de $a$ por $M(a)$. Dados dois inteiros $a$ e $b$, definimos o *mínimo múltiplo comum* (mmc) de $a$ e $b$ como o menor múltiplo de ambos inteiros $a$ e $b$. Em símbolos:
+
+$$c=\mathrm{mmc}(a,b)\ \Longleftrightarrow\  c\in M(a)\cap M(b)\ \mbox{ e para todo }\ x\in M(a)\cap M(b),\ c\leq x$$.
+
+Também, definimos o *máximo divisor comum* (MDC) de $a$ e $b$ como o maior divisor de ambos inteiros $a$ e $b$. Em símbolos:
+
+$$d=\mathrm{MDC}(a,b)\ \Longleftrightarrow\ d\in D(a)\cap D(b)\ \mbox{ e para todo }\ y\in D(a)\cap D(b),\ d\geq y$$
+
+Dizemos que dois inteiros $a$ e $b$ são *primos entre si*  se $\mathrm{MDC}(a,b)=1$.
+
+Dado um número inteiro $a$, em que $a\neq1,-1$, não é possível definir em $\mathbb{Z}$ o seu inverso $\displaystyle\frac{1}{a}$, ou seja, não podemos definir em $\mathbb{Z}$ a operação inversa da multiplicação (a divisão). Assim, extendemos o conjunto dos inteiros ao conjunto dos racionais.
 
 ### Conjunto dos números racionais
 
 O conjunto dos números racionais é denotado por $\mathbb{Q}$. Um elemento de $\mathbb{Q}$ é da forma $\displaystyle\frac{a}{b}$, em que $a,b\in\mathbb{Z}$ e $b\neq0$, ou seja
 
 $$\mathbb{Q}=\{\displaystyle\frac{a}{b}\ :\ a,b\in\mathbb{Z},\ b\neq0\}$$
+Adotamos as seguintes definições:
+
+1. $\displaystyle\frac{a}{b}=\frac{c}{d}\ \Longleftrightarrow\ ad=bc$
+
+2. $\displaystyle\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}$
+
+3. $\displaystyle\frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}$
+
+Observar que $\mathbb{Z}\subset\mathbb{Q}$, pois podemos pensar todo número inteiro $a$ como sendo $a=\displaystyle\frac{a}{1}$.
+
+Dado $\displaystyle\frac{a}{b}$, chamamos $a$ de *numerador* e *b* de *denominador*. Dizemos que a fração $\displaystyle\frac{a}{b}$ é *irredutível* se $MDC(a,b)=1$, ou seja, se $a$ e $b$ são primos entre si. Caso contrário a fração é dita *redutível*.
+
+Exemplos: $\displaystyle\frac{2}{3}, \frac{4}{5}$ e $\displaystyle\frac{7}{9}$ são frações irredutíveis, porém $\displaystyle\frac{4}{8}$ não é.
+
+Toda fração redutível é igual a uma única fração irredutível. Por exemplo, as frações redutíveis $\displaystyle\frac{4}{8}$ e $\displaystyle\frac{12}{24}$ são iguais à fração irredutível $\displaystyle\frac{1}{2}$.
+
+As operações de adição e multiplicação também estão definidas no conjunto dos racionais. Elas satisfazem as propriedades (A1), (A2), (A3), (A4), (M1), (M2), (M3) e (D1), além da seguinte:
+
+(M4) *Inverso para a multiplicação*: dado $\displaystyle\frac{a}{b}\in\mathbb{Q}$, $\displaystyle\frac{a}{b}\neq0$, existe $\displaystyle\frac{b}{a}$ tal que $\displaystyle\frac{a}{b}\cdot\frac{b}{a}=1$
+
+Assim, podemos definir em $\mathbb{Q}$ a operação de divisão, como sendo 
+
+$$\displaystyle\frac{a}{b}:\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}=\frac{ad}{bc},\ \mbox{ em que }\ \frac{c}{d}\neq0$$
+
+Outra operação importante em $\mathbb{Q}$ é a de *potenciação*. Assim, dado $n\in\mathbb{N}$, definimos $\left(\displaystyle\frac{a}{b}\right)^n$ como sendo
+
+$$\left(\displaystyle\frac{a}{b}\right)^n=\frac{a}{b}\cdot\frac{a}{b}\cdots\frac{a}{b}=\frac{a^n}{b^n}$$
+
+Tal operação pode ser estendida para $n\in\mathbb{Z}$ ao definir $$\left(\displaystyle\frac{a}{b}\right)^n=\left(\displaystyle\frac{b}{a}\right)^{-n}$$
+
+sempre que $\displaystyle\frac{a}{b}\neq0$.
+
+A inversa da potenciação (a radicação), não pode ser definida em $\mathbb{Q}$. Por exemplo, não existe $p=\displaystyle\frac{p}{1}\in\mathbb{Q}$, $p$ primo, tal que $\sqrt{p}\in\mathbb{Q}$. Isso faz necessário considerar o conjunto dos números irracionais.
 
 ### Conjunto dos números irracionais
 
@@ -346,13 +469,13 @@ $$\sqrt{2}=\displaystyle\frac{a}{b}$$
 Elevando ao quadrado ambos os membros, obtemos que 
 $$2 = \left(\displaystyle\frac{a}{b}\right)^2$$
 $$2b^2=a^2$$
-Logo $a^2$ é par, o qual implica que $a$ é par, ou seja, $a=2m$ para algúm $m\in\mathbb{Z}$ (exercício 19). Sendo assim,
+Logo $a^2$ é par, o qual implica que $a$ é par (exercício 19), ou seja, $a=2m$ para algúm $m\in\mathbb{Z}$. Sendo assim,
 
 $$2b^2=(2m)^2=4m^2$$
 $$b^2=2m^2$$
 o qual implica que $b$ é par, ou seja, $b=2n$, para algúm $n\in\mathbb{Z}$.
 Portanto
-$$\displaystyle\frac{a}{b}=\frac{2m}{2n}=\frac{m}{n}$$
+$$\displaystyle\frac{a}{b}=\frac{2m}{2n}$$
 O anterior contradiz o fato que $\displaystyle\frac{a}{b}$ é irredutível. Concluímos então que $\sqrt{2}\not\in\mathbb{Q}$, ou seja, $\sqrt{2}\in\mathbb{I}$.
 
 Outros exemplos de números irracionais são: 
@@ -363,7 +486,27 @@ Outros exemplos de números irracionais são:
 
 ### Conjunto dos números reais
 
-O conjunto dos números reais, denotado por $\mathbb{R}$, é definido como $\mathbb{R}=\mathbb{Q}\cup\mathbb{I}$. Esse conjunto é munido de duas operações, a *adição* $(+)$, a *multiplicação* $(\cdot)$ e uma relação de ordem $(\leq)$. Para $a,b,c\in\mathbb{R}$, as operações de adição e multiplicação e a relação de ordem possuem as seguintes propriedades:
+O conjunto dos números reais, denotado por $\mathbb{R}$, é definido como $\mathbb{R}=\mathbb{Q}\cup\mathbb{I}$. Esse conjunto é munido das operações de adição e multiplicação e uma relação de ordem $(\leq)$. Dado dois números reais $a$ e $b$, dizemos que $a<b$ se o número $a$ fica à esquerda do número $b$ na reta real.
+
+&nbsp;
+
+```{r int, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int.png')
+```
+
+&nbsp;
+
+Dizemos que $b>a$ se $a<b$.
+
+Dois números reais $a$ e $b$ satisfazem necessariamente uma, e só uma, das seguintes condições:
+
+- $a<b$
+- $a=b$
+- $a>b$
+
+Tais propriedades são conhecidas como a *tricotomia* dos números reais. Dizemos assim que o conjunto dos números reais é *ordenado*.
+
+Para $a,b,c\in\mathbb{R}$, enumeramos novamente as propriedades da adição e a multiplicação e incluimos as propriedades da relação de ordem:
 
 (A1) *Associatividade da adição*: $a+(b+c)=(a+b)+c$
 
@@ -375,7 +518,7 @@ O conjunto dos números reais, denotado por $\mathbb{R}$, é definido como $\mat
 
 (M1) *Associatividade da multiplicação*: $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
 
-(M2) *Comutatividade da adição*: $a\cdot b=b\cdot a$
+(M2) *Comutatividade da multiplicação*: $a\cdot b=b\cdot a$
 
 (M3) *Elemento neutro da multiplicação*: existe $1\neq0$ tal que para todo $a\in\mathbb{R}$, $1\cdot a=a\cdot 1=a$
 
@@ -395,6 +538,105 @@ O conjunto dos números reais, denotado por $\mathbb{R}$, é definido como $\mat
 
 (D1) *Distributividade*: $a\cdot(b+c)=a\cdot b + a\cdot c=b\cdot a + c\cdot a = (b+c)\cdot a$
 
+Um conjunto munido de duas operações ($+$) e ($\cdot$) satisfazendo as propriedades anteriores é chamado de *corpo*. Assim, temos que o conjunto dos números reais é um *corpo ordenado*.
+
+## Intervalos
+
+Dados dois números reais $a<b$, definimos:
+
+- *intervalo aberto* de extremos $a$ e $b$ é o conjunto 
+
+$$(a,b)=\{x\in\mathbb{R}\ :\ a<x<b\}$$
+&nbsp;
+
+```{r int01, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int01.png')
+```
+
+&nbsp;
+
+- *intervalo fechado* de extremos $a$ e $b$ é o conjunto
+
+$$[a,b]=\{x\in\mathbb{R}\ :\ a\leq x\leq b\}$$
+
+&nbsp;
+
+```{r int02, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int02.png')
+```
+
+&nbsp;
+
+- *intervalo fechado à direita* de extremos $a$ e $b$ é o conjunto
+
+$$(a,b]=\{x\in\mathbb{R}\ :\ a<x\leq b\}$$
+
+&nbsp;
+
+```{r int03, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int03.png')
+```
+
+&nbsp;
+
+- *intervalo fechado à esquerda* de extremos $a$ e $b$ é o conjunto
+
+$$[a,b)=\{x\in\mathbb{R}\ :\ a\leq x<b\}$$
+
+&nbsp;
+
+```{r int04, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int04.png')
+```
+
+&nbsp;
+
+Fazendo $a=-\infty$ ou $b=+\infty$, podemos definir os seguintes intervalos infinitos:
+
+-Intervalo infinito a esquerda aberto em $a$: 
+
+$$(-\infty,a)=\{x\in\mathbb{R}\ :\ x<a\}$$
+&nbsp;
+
+```{r int05, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int05.png')
+```
+
+&nbsp;
+
+- Intervalo infinito a esquerda fechado em $a$:
+
+$$(-\infty,a]=\{x\in\mathbb{R}\ :\ x\leq a\}$$
+
+&nbsp;
+
+```{r int06, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int06.png')
+```
+
+&nbsp;
+
+- Intervalo infinito a direita aberto em $a$:
+
+$$(a,+\infty)=\{x\in\mathbb{R}\ :\ x>a\}$$
+&nbsp;
+
+```{r int07, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int07.png')
+```
+
+&nbsp;
+
+- Intervalo infinito a direita fechado em $a$:
+
+$$[a,+\infty)=\{x\in\mathbb{R}\ :\ x\geq a\}$$
+&nbsp;
+
+```{r int08, echo=FALSE, fig.cap="", out.width='70%', fig.align="center"}
+knitr::include_graphics('int08.png')
+```
+
+&nbsp;
 
 
 ## Exercícios
