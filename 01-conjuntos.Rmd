@@ -638,6 +638,37 @@ knitr::include_graphics('int08.png')
 
 &nbsp;
 
+## O conjunto dos naturais e o principio da boa ordenação
+
+Embora algumas propriedades das operações elementais dos números não são satisfeitas no conjunto dos números naturais, esse conjunto tem uma propriedade importante que justifica o seu estudo. Tal propriedade é chamada comumente de *principio da boa ordenação*. Uma característica importante de $\mathbb{N}$ é que ele possue um menor elemento: o número $1$. Na verdade, isso é verdade para qualquer subconjunto não-vazio de $\mathbb{N}$. 
+
+*Principio da boa ordenação*: Todo subconjunto não-vazio de $\mathbb{N}$ possue um primeiro (ou menor) elemento, ou seja
+
+$$\mbox{Se }\ H\subset\mathbb{N},\ H\neq\emptyset\ \Longrightarrow\ \exists\,n_0\in H\ \mbox{ tal que }\ \forall m\in H,\ n_0\leq m$$
+
+Essa importante propriedade dos naturais pode ser reformulada, de forma mais conveniente, no princípio conhecido como *indução finita*.
+
+*Indução finita*: Suponha que $P(n)$ denota uma propriedade ou afirmação que depende do número $n\in\mathbb{N}$. Suponha que
+
+(1) $P(1)$ é verdade;
+
+(2) Se $P(k)$ é verdade (hipótese indutiva), então $P(k+1)$ é verdade;
+
+Então, $P(n)$ é verdade para todo $n\in\mathbb{N}$.
+
+Observar que (2) limita-se a afirmar que $P(k+1)$ é verdade no suposto de que $P(k)$ é verdade (tal suposto é comumente chamado de *hipótese indutiva*). Isso é suficiente para assegurar a veracidade de $P(n)$ para todo $n$. De fato, se $P(1)$ é verdade, então, fazendo $k=1$, a condição (2) garante que $P(2)$ é verdade. Ora, se $P(2)$ é verdade, então (fazendo $k=2$ e aplicando a condição (2)) segue que $P(3)$ é verdade. Seguindo com esse raciocínio, resulta evidente que todo número vai ser atingido alguma vez através dessas etapas sucessivas, o que implica que $P(n)$ deve ser verdade para todo $n$.
+
+Exemplo: Provar por indução finita que $1+2+3+\cdots+n=\displaystyle\sum_{k=1}^{n}k=\displaystyle\frac{n(n+1)}{2}$ 
+
+De fato, temos que $1+2=3=\frac{2\cdot 3}{2}$ (observar que primeiramente consideramos a soma de dois elementos, ou seja, comezamos com $k=2$). Suponhamos agora que a hipótese indutiva seja verdade, ou seja, suponha que
+
+$$1+2+\cdots+k=\displaystyle\frac{k(k+1)}{2}$$
+
+Então
+
+$$1+2+\cdots+k+(k+1)=(1+2+\cdots+k)+(k+1)=\displaystyle\frac{k(k+1)}{2}+(k+1)=\\[0.3cm]=\frac{k(k+1)+2(k+1)}{2}=\frac{(k+1)(k+2)}{2}=\frac{(k+1)[(k+1)+1]}{2}$$
+Assim, pela hipótese indutiva, concluímos que $1+2+\cdots+n=\displaystyle\frac{n(n+1)}{2}$ deve ser verdade para todo $n\in\mathbb{N}$.
+
 
 ## Exercícios
 
@@ -796,3 +827,9 @@ Forneça:
 
 
 22. Determine a interseção entre os conjuntos $\mathbb{R} \cap \mathbb{Q}$, $(\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ $ e $\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})$.
+
+23. Demonstrar por indução finita as seguintes fórmulas:
+
+- $1^2+2^2+\cdots+n^2 = \displaystyle\frac{n(n+1)(2n+1)}{2}$
+
+- $1^3+ 2^3 +\cdots+ n^3 = (1+2+\cdots+n)^2$

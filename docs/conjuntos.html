@@ -86,7 +86,8 @@
 <li class="chapter" data-level="1.12.5" data-path="conjuntos.html"><a href="conjuntos.html#conjunto-dos-numeros-reais"><i class="fa fa-check"></i><b>1.12.5</b> Conjunto dos números reais</a></li>
 </ul></li>
 <li class="chapter" data-level="1.13" data-path="conjuntos.html"><a href="conjuntos.html#intervalos"><i class="fa fa-check"></i><b>1.13</b> Intervalos</a></li>
-<li class="chapter" data-level="1.14" data-path="conjuntos.html"><a href="conjuntos.html#exercicios"><i class="fa fa-check"></i><b>1.14</b> Exercícios</a></li>
+<li class="chapter" data-level="1.14" data-path="conjuntos.html"><a href="conjuntos.html#o-conjunto-dos-naturais-e-o-principio-da-boa-ordenacao"><i class="fa fa-check"></i><b>1.14</b> O conjunto dos naturais e o principio da boa ordenação</a></li>
+<li class="chapter" data-level="1.15" data-path="conjuntos.html"><a href="conjuntos.html#exercicios"><i class="fa fa-check"></i><b>1.15</b> Exercícios</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="funcoes.html"><a href="funcoes.html"><i class="fa fa-check"></i><b>2</b> Funções</a><ul>
 <li class="chapter" data-level="2.1" data-path="funcoes.html"><a href="funcoes.html#par-ordenado"><i class="fa fa-check"></i><b>2.1</b> Par ordenado</a></li>
@@ -609,8 +610,28 @@ O anterior contradiz o fato que <span class="math inline">\(\displaystyle\frac{a
 <p><img src="int08.png" width="70%" style="display: block; margin: auto;" /></p>
 <p> </p>
 </div>
+<div id="o-conjunto-dos-naturais-e-o-principio-da-boa-ordenacao" class="section level2">
+<h2><span class="header-section-number">1.14</span> O conjunto dos naturais e o principio da boa ordenação</h2>
+<p>Embora algumas propriedades das operações elementais dos números não são satisfeitas no conjunto dos números naturais, esse conjunto tem uma propriedade importante que justifica o seu estudo. Tal propriedade é chamada comumente de <em>principio da boa ordenação</em>. Uma característica importante de <span class="math inline">\(\mathbb{N}\)</span> é que ele possue um menor elemento: o número <span class="math inline">\(1\)</span>. Na verdade, isso é verdade para qualquer subconjunto não-vazio de <span class="math inline">\(\mathbb{N}\)</span>.</p>
+<p><em>Principio da boa ordenação</em>: Todo subconjunto não-vazio de <span class="math inline">\(\mathbb{N}\)</span> possue um primeiro (ou menor) elemento, ou seja</p>
+<p><span class="math display">\[\mbox{Se }\ H\subset\mathbb{N},\ H\neq\emptyset\ \Longrightarrow\ \exists\,n_0\in H\ \mbox{ tal que }\ \forall m\in H,\ n_0\leq m\]</span></p>
+<p>Essa importante propriedade dos naturais pode ser reformulada, de forma mais conveniente, no princípio conhecido como <em>indução finita</em>.</p>
+<p><em>Indução finita</em>: Suponha que <span class="math inline">\(P(n)\)</span> denota uma propriedade ou afirmação que depende do número <span class="math inline">\(n\in\mathbb{N}\)</span>. Suponha que</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(P(1)\)</span> é verdade;</p></li>
+<li><p>Se <span class="math inline">\(P(k)\)</span> é verdade (hipótese indutiva), então <span class="math inline">\(P(k+1)\)</span> é verdade;</p></li>
+</ol>
+<p>Então, <span class="math inline">\(P(n)\)</span> é verdade para todo <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
+<p>Observar que (2) limita-se a afirmar que <span class="math inline">\(P(k+1)\)</span> é verdade no suposto de que <span class="math inline">\(P(k)\)</span> é verdade (tal suposto é comumente chamado de <em>hipótese indutiva</em>). Isso é suficiente para assegurar a veracidade de <span class="math inline">\(P(n)\)</span> para todo <span class="math inline">\(n\)</span>. De fato, se <span class="math inline">\(P(1)\)</span> é verdade, então, fazendo <span class="math inline">\(k=1\)</span>, a condição (2) garante que <span class="math inline">\(P(2)\)</span> é verdade. Ora, se <span class="math inline">\(P(2)\)</span> é verdade, então (fazendo <span class="math inline">\(k=2\)</span> e aplicando a condição (2)) segue que <span class="math inline">\(P(3)\)</span> é verdade. Seguindo com esse raciocínio, resulta evidente que todo número vai ser atingido alguma vez através dessas etapas sucessivas, o que implica que <span class="math inline">\(P(n)\)</span> deve ser verdade para todo <span class="math inline">\(n\)</span>.</p>
+<p>Exemplo: Provar por indução finita que <span class="math inline">\(1+2+3+\cdots+n=\displaystyle\sum_{k=1}^{n}k=\displaystyle\frac{n(n+1)}{2}\)</span></p>
+<p>De fato, temos que <span class="math inline">\(1+2=3=\frac{2\cdot 3}{2}\)</span> (observar que primeiramente consideramos a soma de dois elementos, ou seja, comezamos com <span class="math inline">\(k=2\)</span>). Suponhamos agora que a hipótese indutiva seja verdade, ou seja, suponha que</p>
+<p><span class="math display">\[1+2+\cdots+k=\displaystyle\frac{k(k+1)}{2}\]</span></p>
+<p>Então</p>
+<p><span class="math display">\[1+2+\cdots+k+(k+1)=(1+2+\cdots+k)+(k+1)=\displaystyle\frac{k(k+1)}{2}+(k+1)=\\[0.3cm]=\frac{k(k+1)+2(k+1)}{2}=\frac{(k+1)(k+2)}{2}=\frac{(k+1)[(k+1)+1]}{2}\]</span>
+Assim, pela hipótese indutiva, concluímos que <span class="math inline">\(1+2+\cdots+n=\displaystyle\frac{n(n+1)}{2}\)</span> deve ser verdade para todo <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
+</div>
 <div id="exercicios" class="section level2">
-<h2><span class="header-section-number">1.14</span> Exercícios</h2>
+<h2><span class="header-section-number">1.15</span> Exercícios</h2>
 <ol style="list-style-type: decimal">
 <li>Descreva os seguintes conjuntos por meio de uma propriedade dos elementos:</li>
 </ol>
@@ -769,8 +790,13 @@ em que o símbolo <span class="math inline">\(n_X\)</span> representa o número 
 <li><span class="math inline">\(\left[-\displaystyle\frac{1}{2}, 0\right) \cup \left(-\displaystyle\frac{3}{2}, -\displaystyle\frac{1}{4} \right]\)</span></li>
 </ul>
 <ol start="22" style="list-style-type: decimal">
-<li>Determine a interseção entre os conjuntos <span class="math inline">\(\mathbb{R} \cap \mathbb{Q}\)</span>, <span class="math inline">\((\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ \)</span> e <span class="math inline">\(\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})\)</span>.</li>
+<li><p>Determine a interseção entre os conjuntos <span class="math inline">\(\mathbb{R} \cap \mathbb{Q}\)</span>, <span class="math inline">\((\mathbb{N} \cap \mathbb{Z}) \cup \mathbb{Q}\ \)</span> e <span class="math inline">\(\ \mathbb{N} \cup (\mathbb{Z} \cap \mathbb{Q})\)</span>.</p></li>
+<li><p>Demonstrar por indução finita as seguintes fórmulas:</p></li>
 </ol>
+<ul>
+<li><p><span class="math inline">\(1^2+2^2+\cdots+n^2 = \displaystyle\frac{n(n+1)(2n+1)}{2}\)</span></p></li>
+<li><p><span class="math inline">\(1^3+ 2^3 +\cdots+ n^3 = (1+2+\cdots+n)^2\)</span></p></li>
+</ul>
 
 </div>
 </div>
