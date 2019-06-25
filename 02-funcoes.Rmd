@@ -171,7 +171,7 @@ Propriedades:
 
 Sejam $A$ e $B$ conjuntos não vazios. Uma *aplicação* ou *função* $f$ de $A$ em $B$ é uma relação binária tal que para todo $x\in A$, existe um único ponto $y\in B$ tal que $(x,y)\in R$. Em notação matemática:
 
-$$R \mbox{ é função }\ \Longleftrightarrow\ \forall x\in A,\ \exists\,!\ y\in B \mbox{ tal que } (x,y)\in R$$
+$$R \mbox{ é função }\ \Longleftrightarrow\ \forall x\in A,\ \exists\,!\ y\in B \mbox{ tal que } xRy$$
 
 &nbsp;
 
@@ -203,6 +203,10 @@ Outro conjunto importante é a *imagem da função* (denotada por $Im_f$), defin
 $$Im_f = \{y\in B\ :\ y=f(x), \mbox{ para algum } x\in A\}$$
 
 Por exemplo, na terceira relação (a qual é função), temos que o conjunto imagem é $Im_f=\{2,3,4\}$. Observar que, neste caso, $1\not\in Im_f$, pois não existe um elemento $x$ em $A$ tal que $1 = f(x)$. 
+
+Geralmente, quando o domínio de uma função não é explicitamente dado, consideramos o domínio como sendo o conjunto dos números reais em que a função está definida.
+
+Exemplo: Seja $f(x)=\displaystyle\frac{1}{x-2}$. Nesse caso, dado que a função não está definida para $x=2$, consideramos $D_f=\mathbb{R}-\{2\}=\{x\in\mathbb{R}\ :\ x\neq 2\}$.
 
 ## Gráfico de funções
 
@@ -438,6 +442,205 @@ Como exemplo, considere a função quadrática $f(x)=x^2-2x+1$. Neste caso, $a=c
 
 ```{r func27, echo=FALSE, fig.cap="", out.width='55%', fig.align=""}
 knitr::include_graphics('func27.png')
+```
+
+&nbsp;
+
+## Função Modular
+
+Dado um número real $x$, definimos o módulo (ou valor absoluto) de $x$ como
+
+$$|\,x\,|=x,\ \mbox{ se } x\geq0,\quad |\,x\,|=-x,\ \mbox{ se } x<0$$
+
+Assim, por exemplo, $|\,5\,|=5$ e $|\,-3\,|=3$.
+
+Da definição de módulo decorrem as seguintes propriedades:
+
+1. $|\,x\,|\geq0$, $\forall x\in\mathbb{R}$
+2. $|\,x\,|=0\ \Leftrightarrow\ x=0$
+3. $|\,x\cdot y\,|=|\,x\,|\cdot|\,y\,|$, $\forall x,y\in\mathbb{R}$
+4. $|\,x\,|^2=x^2$, $\forall x\in\mathbb{R}$
+5. $x\leq|\,x\,|$, $\forall x\in\mathbb{R}$
+6. $|\,x+y\,|\leq |\,x\,|+|\,y\,|$, $\forall x,y\in\mathbb{R}$ (desigualdade triangular)
+7. $|\,x-y\,|\geq |\,x\,|-|\,y\,|$, $\forall x,y\in\mathbb{R}$
+8. $|x|\leq a$\ e \ $a>0\ \Leftrightarrow\ -a\leq x\leq a$  
+9. $|\,x\,|\geq a$\ e \ $a>0\ \Leftrightarrow\ x\leq -a$\  ou\ $x\geq a$
+
+Definimos a função modular como sendo a função $f:\mathbb{R}\longrightarrow\mathbb{R}$ dada por $f(x)=|\,x\,|,\ x\in\mathbb{R}$.
+
+&nbsp;
+
+```{r modular, echo=FALSE, fig.cap="", out.width='70%', fig.align=""}
+knitr::include_graphics('modular.png')
+```
+
+&nbsp;
+
+Observar que $f(x)=|\,x\,|\geq0$ para todo $x$ e, portanto, $Im_f=\mathbb{R}_{\geq0}$. 
+
+## Funções definidas por partes
+
+Uma função $f$ pode estar definida por partes, como mostra o seguinte exemplo:
+
+Exemplo: Graficar a função $f$ definida por 
+
+$$f(x)=-x\ \mbox{ se }\ x<-1,\quad f(x)=x^2-1\, \mbox{ se }\ x\geq1$$
+
+&nbsp;
+
+```{r partes, echo=FALSE, fig.cap="", out.width='50%', fig.align=""}
+knitr::include_graphics('partes.png')
+```
+
+&nbsp;
+
+### Gráfico de funções modulares
+
+Exemplo 1: Graficar a função $f(x)=|\,2x\,|$.
+
+Observar que $f(x)=2x$ se $x\geq0$, e $f(x)=-2x$ se $x<0$. 
+
+&nbsp;
+
+```{r mod01, echo=FALSE, fig.cap="", out.width='30%', fig.align=""}
+knitr::include_graphics('mod01_01.png')
+knitr::include_graphics('mod01_02.png')
+knitr::include_graphics('mod01_03.png')
+```
+
+&nbsp;
+
+Exemplo 2: Graficar a função $f(x)=|\,x-1\,|$.
+
+Observar que $f(x)=x-1$ se $x\geq1$, e $f(x)=1-x$ se $x<1$.
+
+&nbsp;
+
+```{r mod02, echo=FALSE, fig.cap="", out.width='30%', fig.align=""}
+knitr::include_graphics('mod02_01.png')
+knitr::include_graphics('mod02_02.png')
+knitr::include_graphics('mod02_03.png')
+```
+
+&nbsp;
+
+Exemplo 3: Graficar a função $f(x)=|\,x^2-1\,|$.
+
+Observar que $f(x)=x^2-1$ se $x\geq1$ ou $x\leq-1$, e $f(x)=1-x^2$ se $-1<x<1$.
+
+&nbsp;
+
+```{r mod03, echo=FALSE, fig.cap="", out.width='30%', fig.align=""}
+knitr::include_graphics('mod03_01.png')
+knitr::include_graphics('mod03_02.png')
+knitr::include_graphics('mod03_03.png')
+```
+
+&nbsp;
+
+### Equações modulares
+
+Lembrar que, por definição de módulo
+
+$$|\,x\,|=a\ \Longleftrightarrow\ x=a\ \mbox{ ou }\ x=-a$$
+
+Assim, usando essa propriedade, podemos resolver equações modulares.
+
+Exemplo 1: Resolver $|\,2x-1\,|=5$.
+
+Temos que 
+$$|\,2x-1\,|=5\ \Longleftrightarrow\ 2x-1=5\ \mbox{ ou }\ 2x-1=-5$$
+
+Se $2x-1=5$, então $x=3$. Se $2x-1=-5$, então $x=-2$. Logo, o conjunto de soluções da equação $|\,2x-1\,|=5$ é dado por $S=\{3,-2\}$.
+
+Exemplo 2: Resolver $|\,3x-1\,|=|\,2x+3\,|$.
+
+Pela propriedade de módulo, devemos ter $|\,a\,|=|\,b\,|\ \Leftrightarrow\ a=b\ \mbox{ ou }\ a=-b$. Portanto
+
+$$|\,3x-1\,|=|\,2x+3\,|\ \Longleftrightarrow\ 3x-1=2x+3\ \mbox{ ou }\ 3x-1=-2x-3$$
+
+Se $3x-1=2x+3$, então $x=4$. Se $3x+1=-2x-3$, então $x=-\displaystyle\frac{2}{5}$. Logo, o conjunto solução da equação $|\,3x-1\,|=|\,2x+3\,|$ é dado por $S=\{4,-\displaystyle\frac{2}{5}\}$.
+
+Exemplo 3: Resolver $|\,x+1\,|=3x+2$.
+
+Pela propriedade de módulo, sabemos que $|\,a\,|\geq0$ para todo $a\in\mathbb{R}$. Assim, temos que 
+
+$$3x+2\geq0\ \Rightarrow\ x\geq-\displaystyle\frac{2}{3}$$
+Novamente, temos duas possibilidades: $x+1=3x+2$ ou $x+1=-3x-2$.
+
+Se $x+1=3x+2$, então $x=-\displaystyle\frac{1}{2}$. Se $x+1=-3x-2$, então $x=-\displaystyle\frac{3}{4}$. Observar que das duas possíves soluções, somente a primeira satisfaz a condição de ser maior que $-\displaystyle\frac{2}{3}$. Assim, a única solução da equação $|\,x+1\,|=3x+2$ é  $x=-\displaystyle\frac{1}{2}$.
+
+### Inequações modulares
+
+Usando as seguintes propriedades de módulo (para $a>0$):
+
+$$|\,x\,|\leq a\ \ \Longleftrightarrow\ -a\leq x\leq a$$
+
+$$|\,x\,|\geq a\ \Longleftrightarrow\ x\geq a\ \mbox{ ou }\ x\leq -a$$
+Podemos resolver inequações modulares.
+
+Exemplo 1: Resolver $|\,2x+1\,|<3$
+
+Das propriedades de módulo, temos que 
+
+$$|\,2x+1\,|<3\ \Leftrightarrow\ -3<2x+1<3\ \Leftrightarrow\ -4<2x<2\ \Leftrightarrow\ -2<x<1$$
+
+Assim, o conjunto solução é dado por $S=\{x\in\mathbb{R}\ :\ -2<x<1\}$.
+
+Exemplo 2: Resolver $|\,2x+1\,|>5$
+
+Das propriedades de módulo, resulta
+
+$$|\,4x+1\,|>5\ \Leftrightarrow\ 4x+1>5\ \mbox{ ou }\ 4x+1<-5\ \Leftrightarrow\ x>1\ \mbox{ ou }\ x<-\displaystyle\frac{3}{2}$$
+
+Portanto, o conjunto solução é dado por $S=\{x\in\mathbb{R}\ :\ x>1\ \mbox{ ou }\ x<-\displaystyle\frac{3}{2}\}$
+
+Exemplo 3: Resolver $|\,x+1\,|\leq 3x-2$
+
+Das propriedades de módulo, temos que 
+
+$$-3x+2\leq x+1\leq 3x-2$$
+Da primeira desigualdade, obtemos
+
+$$-3x+2\leq x+1\ \Leftrightarrow\ 4x\geq1\ \Leftrightarrow\ x\geq\displaystyle\frac{1}{4}$$
+
+Da segunda desigualdade, resulta
+
+$$x+1\leq3x-2\ \Leftrightarrow\ 2x\geq3\ \Leftrightarrow\ x\geq\displaystyle\frac{3}{2}$$
+Dado que ambas desigualdades devem ser satisfeitas ao mesmo tempo, o conjunto solução é dado por
+
+$$S=\{x\in\mathbb{R}\ :\ x\geq\displaystyle\frac{1}{4}\}\cap\{x\in\mathbb{R}\ :\ x\geq\displaystyle\frac{3}{2}\}=\{x\in\mathbb{R}\ :\ x\geq\displaystyle\frac{3}{2}\}$$
+
+&nbsp;
+
+```{r ineq01, echo=FALSE, fig.cap="", out.width='70%', fig.align=""}
+knitr::include_graphics('ineq01.png')
+```
+
+&nbsp;
+
+Exemplo 4: Resolver $|\,3x-1\,|>2x+2$
+
+Das propriedades de módulo, temos que
+
+$$|\,3x-1\,|>2x+2\ \Leftrightarrow\ 3x-1>2x+2\ \mbox{ ou }\ 3x-1<-2x-2$$
+
+Da primeira desigualdade, resulta
+
+$$3x-1>2x+2\ \Leftrightarrow\ x>3$$
+
+Da segunda desigualdade, temos que
+
+$$3x-1<-2x-2\ \Leftrightarrow\ x<-\displaystyle\frac{1}{5}$$
+
+Dado que pelo menos uma das desigualdades deve ser satisfeita, o conjunto solução é dado por
+
+$$S=\{x\in\mathbb{R}\ :\ x>3\}\cup \{x\in\mathbb{R}\ :\ x<-\displaystyle\frac{1}{5}\}=\{x\in\mathbb{R}\ :\ x<-\displaystyle\frac{1}{5}\ \mbox{ou}\ x>3\}$$
+
+&nbsp;
+
+```{r ineq02, echo=FALSE, fig.cap="", out.width='70%', fig.align=""}
+knitr::include_graphics('ineq02.png')
 ```
 
 &nbsp;
