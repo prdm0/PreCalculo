@@ -447,9 +447,9 @@ knitr::include_graphics('func27.png')
 
 &nbsp;
 
-### Função $f(x)=x^3$
+### Função cúbica
 
-Consideremos a função $f(x)=x^3$, cuja gráfica é apresentada a seguir:
+Uma função cúbica é da forma $f(x)=ax^3+bx^2+cx+d$, sendo $a\neq0$. O gráfico do caso especial $f(x)=x^3$ (quando $a=1$ e $b=c=d=0$) é apresentado a seguir:
 
 &nbsp;
 
@@ -463,7 +463,7 @@ Temos que $D_f=\mathbb{R}$. Além disso, $Im_f={R}$, pois dado $y\in\mathbb{R}$,
 
 O zero da função é $x=0$.
 
-Onservar que $f(x)=x^3$ é uma função crescente, ou seja
+Observar que $f(x)=x^3$ é uma função crescente, ou seja
 
 $$\mbox{Se }\ x_1<x_2\ \Longrightarrow\ x_1^3<x_2^3$$
 
@@ -734,3 +734,37 @@ o qual é um absurdo. Nesse caso, o conjunto solução é $S_3=\emptyset$.
 Assim, temos que o conjunto solução da inequação $|\,2x-6\,|-|\,x\,|\leq 4-x$ é dado por
 
 $$S=S_1\cup S_2\cup S_3=[3,5]\cup[1,3)\cup\emptyset=[1,5]$$
+
+## Exercícios
+
+1) Dados os conjuntos $A=\{1,3,4\}$, $B=\{-2,1\}$ e $C=\{-1,0,2\}$, represente pelos elementos e pelo gráfico cartesiano os seguintes produtos:
+
+a) $A\times B$
+b) $B\times A$
+c) $A\times C$
+d) $C\times A$
+
+2) Dados os conjuntos $A=\{1,2,3,4\}$ e $B=\{x\in\mathbb{R}\ :\ 1\leq x\leq 4\}=[1,4]$, represente gráficamente os conjuntos:
+
+a) $A\times B$
+b) $B\times A$
+c) $(A\times B)\cup (B\times A)$
+
+3) Dado o conjunto $A=\{1,2,3,4,5,6\}$, enumere os pares ordenados e construa o gráfico cartesiano da relação $R$ em $A$ dada por
+
+$$\{(x,y)\in A^2\ :\ \mathrm{MDC}(x,y)=2\}$$
+
+4) A função $f: \mathbb{R}\longrightarrow \mathbb{R}$ tem a propriedade $f(m\cdot x)=m\cdot f(x)$, para todo $m,x\in\mathbb{R}$. Calcule $f(0)$
+
+5) Seja $f$ uma função definida no conjunto dos números naturais, tal que 
+
+$$f(n+1)=2\,f(n)+3,\ \mbox{ para todo }\ n\in\mathbb{N}$$
+
+a) Supondo que $f(0)=0$, calcule $f(1),f(2),f(3),\ldots\ $ e descubra a fórmula geral de $f(n)$.
+b) Prove por indução finita a fórmula descoberta.
+
+
+
+
+
+
