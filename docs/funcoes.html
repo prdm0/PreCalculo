@@ -107,12 +107,14 @@
 <li class="chapter" data-level="2.10.2" data-path="funcoes.html"><a href="funcoes.html#funcao-linear"><i class="fa fa-check"></i><b>2.10.2</b> Função linear</a></li>
 <li class="chapter" data-level="2.10.3" data-path="funcoes.html"><a href="funcoes.html#funcao-afim"><i class="fa fa-check"></i><b>2.10.3</b> Função afim</a></li>
 <li class="chapter" data-level="2.10.4" data-path="funcoes.html"><a href="funcoes.html#funcao-quadratica"><i class="fa fa-check"></i><b>2.10.4</b> Função quadrática</a></li>
+<li class="chapter" data-level="2.10.5" data-path="funcoes.html"><a href="funcoes.html#funcao-fxx3"><i class="fa fa-check"></i><b>2.10.5</b> Função <span class="math inline">\(f(x)=x^3\)</span></a></li>
+<li class="chapter" data-level="2.10.6" data-path="funcoes.html"><a href="funcoes.html#funcao-reciproca"><i class="fa fa-check"></i><b>2.10.6</b> Função recíproca</a></li>
+<li class="chapter" data-level="2.10.7" data-path="funcoes.html"><a href="funcoes.html#funcao-modular"><i class="fa fa-check"></i><b>2.10.7</b> Função Modular</a></li>
 </ul></li>
-<li class="chapter" data-level="2.11" data-path="funcoes.html"><a href="funcoes.html#funcao-modular"><i class="fa fa-check"></i><b>2.11</b> Função Modular</a></li>
-<li class="chapter" data-level="2.12" data-path="funcoes.html"><a href="funcoes.html#funcoes-definidas-por-partes"><i class="fa fa-check"></i><b>2.12</b> Funções definidas por partes</a><ul>
-<li class="chapter" data-level="2.12.1" data-path="funcoes.html"><a href="funcoes.html#grafico-de-funcoes-modulares"><i class="fa fa-check"></i><b>2.12.1</b> Gráfico de funções modulares</a></li>
-<li class="chapter" data-level="2.12.2" data-path="funcoes.html"><a href="funcoes.html#equacoes-modulares"><i class="fa fa-check"></i><b>2.12.2</b> Equações modulares</a></li>
-<li class="chapter" data-level="2.12.3" data-path="funcoes.html"><a href="funcoes.html#inequacoes-modulares"><i class="fa fa-check"></i><b>2.12.3</b> Inequações modulares</a></li>
+<li class="chapter" data-level="2.11" data-path="funcoes.html"><a href="funcoes.html#funcoes-definidas-por-partes"><i class="fa fa-check"></i><b>2.11</b> Funções definidas por partes</a><ul>
+<li class="chapter" data-level="2.11.1" data-path="funcoes.html"><a href="funcoes.html#grafico-de-funcoes-modulares"><i class="fa fa-check"></i><b>2.11.1</b> Gráfico de funções modulares</a></li>
+<li class="chapter" data-level="2.11.2" data-path="funcoes.html"><a href="funcoes.html#equacoes-modulares"><i class="fa fa-check"></i><b>2.11.2</b> Equações modulares</a></li>
+<li class="chapter" data-level="2.11.3" data-path="funcoes.html"><a href="funcoes.html#inequacoes-modulares"><i class="fa fa-check"></i><b>2.11.3</b> Inequações modulares</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
@@ -380,29 +382,30 @@ Em particular, quando <span class="math inline">\(a=1\)</span>, a função <span
 <p><img src="func23.png" width="100%" /></p>
 <p> </p>
 <p>O gráfico da função quadrática atinge seu valor mínimo (quando <span class="math inline">\(a&gt;0\)</span>) ou seu valor máximo (quando <span class="math inline">\(a&lt;0\)</span>) no ponto <span class="math inline">\(x=-\displaystyle\frac{b}{2a}\)</span> (este fato pode ser provado usando o conceito de derivada). Nesses pontos, a função atinge o valor</p>
-<p><span class="math display">\[f\!\left(-\displaystyle\frac{b}{2a}\right) = a\left\{-\displaystyle\frac{b}{2a}\right\}^2 + b\left\{-\displaystyle\frac{b}{2a}\right\} + c = -\frac{b^2}{4a}+c\]</span>
-O par ordenado <span class="math inline">\(V=(-\displaystyle\frac{b}{2a}\ ,\ -\frac{b^2}{4a}+c)\)</span> é chamado <em>vértice da parábola</em>.</p>
+<p><span class="math display">\[f\!\left(-\displaystyle\frac{b}{2a}\right) = a\left\{-\displaystyle\frac{b}{2a}\right\}^2 + b\left\{-\displaystyle\frac{b}{2a}\right\} + c = -\frac{b^2}{4a}+c=-\frac{b^2-4ac}{4a}=-\frac{\Delta}{4a}\]</span>
+O valor <span class="math inline">\(\Delta=b^2-4ac\)</span> é chamado de <em>discriminante</em>.</p>
+<p>O par ordenado <span class="math inline">\(V=(-\displaystyle\frac{b}{2a}\ ,\ -\frac{b^2}{4a}+c)=(-\displaystyle\frac{b}{2a}\ ,\ -\frac{\Delta}{4a})\)</span> é chamado <em>vértice da parábola</em>.</p>
 <p>Observar que <span class="math inline">\(D_f=\mathbb{R}\)</span>. Além disso:</p>
 <ul>
-<li><p>Se <span class="math inline">\(a&gt;0\)</span>, então <span class="math inline">\(Im_f=\{y\in\mathbb{R}\ :\ y\geq -\displaystyle\frac{b^2}{4a}+c\}\)</span>.
+<li><p>Se <span class="math inline">\(a&gt;0\)</span>, então <span class="math inline">\(Im_f=\{y\in\mathbb{R}\ :\ y\geq -\displaystyle\frac{\Delta}{4a}\}\)</span>.
 <br></p></li>
-<li><p>Se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(Im_f=\{y\in\mathbb{R}\ :\ y\leq -\displaystyle\frac{b^2}{4a}+c\}\)</span>.</p></li>
+<li><p>Se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(Im_f=\{y\in\mathbb{R}\ :\ y\leq -\displaystyle\frac{\Delta}{4a}\}\)</span>.</p></li>
 </ul>
 <p>Para achar os zeros de uma função quadrática, observemos que</p>
-<p><span class="math display">\[ax^2+bx+c=0\ \Longrightarrow\ x=\displaystyle\frac{-b \pm \sqrt{b^2-4ac}}{2a}\]</span></p>
-<p>A quantidade <span class="math inline">\(\Delta=b^2-4ac\)</span> dentro da raiz é chamado <em>discriminante</em>. O valor de <span class="math inline">\(\Delta\)</span> permite “discriminar” entre os seguintes casos:</p>
+<p><span class="math display">\[ax^2+bx+c=0\ \Longrightarrow\ x=\displaystyle\frac{-b \pm \sqrt{b^2-4ac}}{2a}=\frac{-b\pm \sqrt{\Delta}}{2a}\]</span>
+O valor de <span class="math inline">\(\Delta\)</span> permite “discriminar” entre os seguintes casos:</p>
 <ul>
 <li>Se <span class="math inline">\(\Delta&gt;0\)</span>, então a função quadrática tem exatamente duas raíces reais.</li>
 <li>Se <span class="math inline">\(\Delta=0\)</span>, então a função quadrática tem exatamente uma raiz real.</li>
 <li>Se <span class="math inline">\(\Delta&lt;0\)</span>, então a função quadrática não tem raíces reais.</li>
 </ul>
-<p>As três situações são ilustradas no seguinte gráfico.</p>
+<p>As três situações são ilustradas no seguinte gráfico quando <span class="math inline">\(a&gt;0\)</span>.</p>
 <p> </p>
 <p><img src="func24.png" width="100%" /></p>
 <p> </p>
 <p>Para fazer uma análise do sinal da função quadrática <span class="math inline">\(f(x)=ax^2 +bx +c\)</span>, devemos considerar o sinal do discriminante <span class="math inline">\(\Delta\)</span> e da constante <span class="math inline">\(a\)</span>. Assim, temos seis casos possíveis:</p>
 <ul>
-<li>Se <span class="math inline">\(\Delta&gt;0\)</span>, então temos duas raíçes reais e distintas, digamos <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span>, sendo <span class="math inline">\(x_1&lt;x_2\)</span> e <span class="math inline">\(f(x_1)=f(x_2)=0\)</span>. Nesse caso, temos duas situações: se <span class="math inline">\(a&gt;0\)</span>, temos que <span class="math inline">\(f(x)&gt;0\)</span> para <span class="math inline">\(x&lt;x_1\)</span> ou <span class="math inline">\(x&gt;x_2\)</span> e <span class="math inline">\(f(x)&lt;0\)</span> para <span class="math inline">\(x_1&lt;x&lt;x_2\)</span>. Se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(f(x)&lt;0\)</span> para <span class="math inline">\(x&lt;x_1\)</span> ou <span class="math inline">\(x&gt;x_2\)</span> e <span class="math inline">\(f(x)&gt;0\)</span> para <span class="math inline">\(x_1&lt;x&lt;x_2\)</span>.</li>
+<li>Se <span class="math inline">\(\Delta&gt;0\)</span>, então temos duas raíçes reais e distintas, digamos <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span>, sendo <span class="math inline">\(x_1&lt;x_2\)</span> e <span class="math inline">\(f(x_1)=f(x_2)=0\)</span>. Nesse caso, temos duas situações: se <span class="math inline">\(a&gt;0\)</span>, temos que <span class="math inline">\(f(x)&gt;0\)</span> para <span class="math inline">\(x&lt;x_1\)</span> e <span class="math inline">\(x&gt;x_2\)</span>, e <span class="math inline">\(f(x)&lt;0\)</span> para <span class="math inline">\(x_1&lt;x&lt;x_2\)</span>. Se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(f(x)&lt;0\)</span> para <span class="math inline">\(x&lt;x_1\)</span> e <span class="math inline">\(x&gt;x_2\)</span>, e <span class="math inline">\(f(x)&gt;0\)</span> para <span class="math inline">\(x_1&lt;x&lt;x_2\)</span>.</li>
 <li>Se <span class="math inline">\(\Delta=0\)</span>, então temos uma única raíz real <span class="math inline">\(x_1\)</span>, sendo <span class="math inline">\(f(x_1)=0\)</span>. Assim temos que se <span class="math inline">\(a&gt;0\)</span>, então <span class="math inline">\(f(x)&gt;0\)</span> para todo <span class="math inline">\(x\neq x_1\)</span>. Se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(f(x)&lt;0\)</span> para todo <span class="math inline">\(x\neq x_1\)</span>.</li>
 <li><span class="math inline">\(\Delta&lt;0\)</span>, então não existem raíçes reais. Portanto, se <span class="math inline">\(a&gt;0\)</span>, então <span class="math inline">\(f(x)&gt;0\)</span> para todo <span class="math inline">\(x\)</span>. Se <span class="math inline">\(a&lt;0\)</span>, então <span class="math inline">\(f(x)&lt;0\)</span> para todo <span class="math inline">\(x\)</span>.</li>
 </ul>
@@ -411,24 +414,45 @@ O par ordenado <span class="math inline">\(V=(-\displaystyle\frac{b}{2a}\ ,\ -\f
 <p><img src="func27.png" width="55%" /></p>
 <p> </p>
 </div>
+<div id="funcao-fxx3" class="section level3">
+<h3><span class="header-section-number">2.10.5</span> Função <span class="math inline">\(f(x)=x^3\)</span></h3>
+<p>Consideremos a função <span class="math inline">\(f(x)=x^3\)</span>, cuja gráfica é apresentada a seguir:</p>
+<p> </p>
+<p><img src="cubic.png" width="55%" /></p>
+<p> </p>
+<p>Temos que <span class="math inline">\(D_f=\mathbb{R}\)</span>. Além disso, <span class="math inline">\(Im_f={R}\)</span>, pois dado <span class="math inline">\(y\in\mathbb{R}\)</span>, existe <span class="math inline">\(x=\sqrt[3]{y}\)</span> tal que <span class="math inline">\(f(x)=f(\sqrt[3]{y})=(\sqrt[3]{y})^3=y\)</span>.</p>
+<p>O zero da função é <span class="math inline">\(x=0\)</span>.</p>
+<p>Onservar que <span class="math inline">\(f(x)=x^3\)</span> é uma função crescente, ou seja</p>
+<p><span class="math display">\[\mbox{Se }\ x_1&lt;x_2\ \Longrightarrow\ x_1^3&lt;x_2^3\]</span></p>
 </div>
-<div id="funcao-modular" class="section level2">
-<h2><span class="header-section-number">2.11</span> Função Modular</h2>
+<div id="funcao-reciproca" class="section level3">
+<h3><span class="header-section-number">2.10.6</span> Função recíproca</h3>
+<p>A função recíproca é definida por</p>
+<p><span class="math display">\[f(x)=\frac{1}{x}\]</span></p>
+<p>Observar que <span class="math inline">\(D_f=\{x\in\mathbb{R}\ :\ x\neq0\}=\mathbb{R}-\{0\}\)</span>, pois a função não está definida em <span class="math inline">\(x=0\)</span>.
+A imagem é <span class="math inline">\(Im_f=\mathbb{R}-\{0\}\)</span>, pois não existe <span class="math inline">\(x\in D_f\)</span> tal que <span class="math inline">\(f(x)=0\)</span>.</p>
+<p>Se <span class="math inline">\(x_1&lt;x_2&lt;0\)</span>, então <span class="math inline">\(\displaystyle\frac{1}{x_2}&lt;\frac{1}{x_1}&lt;0\)</span>. Se <span class="math inline">\(0&lt;x_1&lt;x_2\)</span>, então <span class="math inline">\(0&lt;\displaystyle\frac{1}{x_2}&lt;\frac{1}{x_1}\)</span>. Portanto, a função recíproca é decrescente.</p>
+<p>A função tem por gráfico uma hipérbole equilátera.</p>
+<p> </p>
+<p><img src="reciproca.png" width="55%" /></p>
+<p> </p>
+</div>
+<div id="funcao-modular" class="section level3">
+<h3><span class="header-section-number">2.10.7</span> Função Modular</h3>
 <p>Dado um número real <span class="math inline">\(x\)</span>, definimos o módulo (ou valor absoluto) de <span class="math inline">\(x\)</span> como</p>
 <p><span class="math display">\[|\,x\,|=x,\ \mbox{ se } x\geq0,\quad |\,x\,|=-x,\ \mbox{ se } x&lt;0\]</span></p>
 <p>Assim, por exemplo, <span class="math inline">\(|\,5\,|=5\)</span> e <span class="math inline">\(|\,-3\,|=3\)</span>.</p>
 <p>Da definição de módulo decorrem as seguintes propriedades:</p>
 <ol style="list-style-type: decimal">
-<li><span class="math inline">\(|\,x\,|\geq0\)</span>, <span class="math inline">\(\forall x\in\mathbb{R}\)</span></li>
-<li><span class="math inline">\(|\,x\,|=0\ \Leftrightarrow\ x=0\)</span></li>
-<li><span class="math inline">\(|\,x\cdot y\,|=|\,x\,|\cdot|\,y\,|\)</span>, <span class="math inline">\(\forall x,y\in\mathbb{R}\)</span></li>
-<li><span class="math inline">\(|\,x\,|^2=x^2\)</span>, <span class="math inline">\(\forall x\in\mathbb{R}\)</span></li>
-<li><span class="math inline">\(x\leq|\,x\,|\)</span>, <span class="math inline">\(\forall x\in\mathbb{R}\)</span></li>
-<li><span class="math inline">\(|\,x+y\,|\leq |\,x\,|+|\,y\,|\)</span>, <span class="math inline">\(\forall x,y\in\mathbb{R}\)</span> (desigualdade triangular)</li>
-<li><span class="math inline">\(|\,x-y\,|\geq |\,x\,|-|\,y\,|\)</span>, <span class="math inline">\(\forall x,y\in\mathbb{R}\)</span></li>
-<li><span class="math inline">\(|x|\leq a\)</span> e  <span class="math inline">\(a&gt;0\ \Leftrightarrow\ -a\leq x\leq a\)</span><br />
-</li>
-<li><span class="math inline">\(|\,x\,|\geq a\)</span> e  <span class="math inline">\(a&gt;0\ \Leftrightarrow\ x\leq -a\)</span>  ou <span class="math inline">\(x\geq a\)</span></li>
+<li><p><span class="math inline">\(|\,x\,|\geq0\)</span>, <span class="math inline">\(\forall x\in\mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(|\,x\,|=0\ \Leftrightarrow\ x=0\)</span></p></li>
+<li><p><span class="math inline">\(|\,x\cdot y\,|=|\,x\,|\cdot|\,y\,|\)</span>, <span class="math inline">\(\forall x,y\in\mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(|\,x\,|^2=x^2\)</span>, <span class="math inline">\(\forall x\in\mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(x\leq|\,x\,|\)</span>, <span class="math inline">\(\forall x\in\mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(|\,x+y\,|\leq |\,x\,|+|\,y\,|\)</span>, <span class="math inline">\(\forall x,y\in\mathbb{R}\)</span> (desigualdade triangular)</p></li>
+<li><p><span class="math inline">\(|\,x-y\,|\geq |\,x\,|-|\,y\,|\)</span>, <span class="math inline">\(\forall x,y\in\mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(|x|\leq a\)</span> e  <span class="math inline">\(a&gt;0\ \Leftrightarrow\ -a\leq x\leq a\)</span></p></li>
+<li><p><span class="math inline">\(|\,x\,|\geq a\)</span> e  <span class="math inline">\(a&gt;0\ \Leftrightarrow\ x\leq -a\)</span>  ou <span class="math inline">\(x\geq a\)</span></p></li>
 </ol>
 <p>Definimos a função modular como sendo a função <span class="math inline">\(f:\mathbb{R}\longrightarrow\mathbb{R}\)</span> dada por <span class="math inline">\(f(x)=|\,x\,|,\ x\in\mathbb{R}\)</span>.</p>
 <p> </p>
@@ -436,8 +460,9 @@ O par ordenado <span class="math inline">\(V=(-\displaystyle\frac{b}{2a}\ ,\ -\f
 <p> </p>
 <p>Observar que <span class="math inline">\(f(x)=|\,x\,|\geq0\)</span> para todo <span class="math inline">\(x\)</span> e, portanto, <span class="math inline">\(Im_f=\mathbb{R}_{\geq0}\)</span>.</p>
 </div>
+</div>
 <div id="funcoes-definidas-por-partes" class="section level2">
-<h2><span class="header-section-number">2.12</span> Funções definidas por partes</h2>
+<h2><span class="header-section-number">2.11</span> Funções definidas por partes</h2>
 <p>Uma função <span class="math inline">\(f\)</span> pode estar definida por partes, como mostra o seguinte exemplo:</p>
 <p>Exemplo: Graficar a função <span class="math inline">\(f\)</span> definida por</p>
 <p><span class="math display">\[f(x)=-x\ \mbox{ se }\ x&lt;-1,\quad f(x)=x^2-1\, \mbox{ se }\ x\geq1\]</span></p>
@@ -445,7 +470,7 @@ O par ordenado <span class="math inline">\(V=(-\displaystyle\frac{b}{2a}\ ,\ -\f
 <p><img src="partes.png" width="50%" /></p>
 <p> </p>
 <div id="grafico-de-funcoes-modulares" class="section level3">
-<h3><span class="header-section-number">2.12.1</span> Gráfico de funções modulares</h3>
+<h3><span class="header-section-number">2.11.1</span> Gráfico de funções modulares</h3>
 <p>Exemplo 1: Graficar a função <span class="math inline">\(f(x)=|\,2x\,|\)</span>.</p>
 <p>Observar que <span class="math inline">\(f(x)=2x\)</span> se <span class="math inline">\(x\geq0\)</span>, e <span class="math inline">\(f(x)=-2x\)</span> se <span class="math inline">\(x&lt;0\)</span>.</p>
 <p> </p>
@@ -463,7 +488,7 @@ O par ordenado <span class="math inline">\(V=(-\displaystyle\frac{b}{2a}\ ,\ -\f
 <p> </p>
 </div>
 <div id="equacoes-modulares" class="section level3">
-<h3><span class="header-section-number">2.12.2</span> Equações modulares</h3>
+<h3><span class="header-section-number">2.11.2</span> Equações modulares</h3>
 <p>Lembrar que, por definição de módulo</p>
 <p><span class="math display">\[|\,x\,|=a\ \Longleftrightarrow\ x=a\ \mbox{ ou }\ x=-a\]</span></p>
 <p>Assim, usando essa propriedade, podemos resolver equações modulares.</p>
@@ -482,7 +507,7 @@ Novamente, temos duas possibilidades: <span class="math inline">\(x+1=3x+2\)</sp
 <p>Se <span class="math inline">\(x+1=3x+2\)</span>, então <span class="math inline">\(x=-\displaystyle\frac{1}{2}\)</span>. Se <span class="math inline">\(x+1=-3x-2\)</span>, então <span class="math inline">\(x=-\displaystyle\frac{3}{4}\)</span>. Observar que das duas possíves soluções, somente a primeira satisfaz a condição de ser maior que <span class="math inline">\(-\displaystyle\frac{2}{3}\)</span>. Assim, a única solução da equação <span class="math inline">\(|\,x+1\,|=3x+2\)</span> é <span class="math inline">\(x=-\displaystyle\frac{1}{2}\)</span>.</p>
 </div>
 <div id="inequacoes-modulares" class="section level3">
-<h3><span class="header-section-number">2.12.3</span> Inequações modulares</h3>
+<h3><span class="header-section-number">2.11.3</span> Inequações modulares</h3>
 <p>Usando as seguintes propriedades de módulo (para <span class="math inline">\(a&gt;0\)</span>):</p>
 <p><span class="math display">\[|\,x\,|\leq a\ \ \Longleftrightarrow\ -a\leq x\leq a\]</span></p>
 <p><span class="math display">\[|\,x\,|\geq a\ \Longleftrightarrow\ x\geq a\ \mbox{ ou }\ x\leq -a\]</span>
@@ -519,6 +544,26 @@ Dado que ambas desigualdades devem ser satisfeitas ao mesmo tempo, o conjunto so
 <p> </p>
 <p><img src="ineq02.png" width="70%" /></p>
 <p> </p>
+<p>Exemplo 5: Resolver <span class="math inline">\(|\,2x-6\,|-|\,x\,|\leq 4-x\)</span></p>
+<p>Observar que</p>
+<p><span class="math display">\[|\,2x-6\,|=2x-6\ \mbox{ se }\ x\geq 3, \quad |\,2x-6\,|=-2x+6\ \mbox{ se }\ x&lt;3\]</span></p>
+<p><span class="math display">\[|\,x\,|=x\ \mbox{ se }\ x\geq0, \quad |\,x\,|=-x\ \mbox{ se }\ x&lt;0\]</span></p>
+<p> </p>
+<p><img src="ineq03.png" width="80%" /></p>
+<p> </p>
+<p>1º) Se <span class="math inline">\(x\geq3\)</span>, então</p>
+<p><span class="math display">\[|\,2x-6\,|-|\,x\,|\leq 4-x\ \Longleftrightarrow\ x-6\leq4-x\ \Longleftrightarrow\ x\leq5\]</span></p>
+<p>Nesse caso, o conjunto solução é dado por</p>
+<p><span class="math display">\[S_1=[3,+\infty)\cap(-\infty,5]=[3,5]\]</span></p>
+<p>2º) Se <span class="math inline">\(0\leq x&lt;3\)</span>, então</p>
+<p><span class="math display">\[|\,2x-6\,|-|\,x\,|\leq 4-x\ \Longleftrightarrow\ -3x+6\leq 4-x\ \Longleftrightarrow\ x\geq1\]</span>
+Nesse caso, o conjunto solução é dado por</p>
+<p><span class="math display">\[S_2=[0,3)\cap[1,+\infty)=[1,3)\]</span>
+3º) Se <span class="math inline">\(x&lt;0\)</span>, então</p>
+<p><span class="math display">\[|\,2x-6\,|-|\,x\,|\leq 4-x\ \Longleftrightarrow\ -x+6\leq 4-x\ \Longleftrightarrow\ 6\leq4\]</span>
+o qual é um absurdo. Nesse caso, o conjunto solução é <span class="math inline">\(S_3=\emptyset\)</span>.</p>
+<p>Assim, temos que o conjunto solução da inequação <span class="math inline">\(|\,2x-6\,|-|\,x\,|\leq 4-x\)</span> é dado por</p>
+<p><span class="math display">\[S=S_1\cup S_2\cup S_3=[3,5]\cup[1,3)\cup\emptyset=[1,5]\]</span></p>
 
 </div>
 </div>

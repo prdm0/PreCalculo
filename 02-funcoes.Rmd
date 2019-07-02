@@ -400,27 +400,28 @@ knitr::include_graphics('func23.png')
 
 O gráfico da função quadrática atinge seu valor mínimo (quando $a>0$) ou seu valor máximo (quando $a<0$) no ponto $x=-\displaystyle\frac{b}{2a}$ (este fato pode ser provado usando o conceito de derivada). Nesses pontos, a função atinge o valor
 
-$$f\!\left(-\displaystyle\frac{b}{2a}\right) = a\left\{-\displaystyle\frac{b}{2a}\right\}^2 + b\left\{-\displaystyle\frac{b}{2a}\right\} + c = -\frac{b^2}{4a}+c$$
-O par ordenado $V=(-\displaystyle\frac{b}{2a}\ ,\ -\frac{b^2}{4a}+c)$ é chamado *vértice da parábola*.
+$$f\!\left(-\displaystyle\frac{b}{2a}\right) = a\left\{-\displaystyle\frac{b}{2a}\right\}^2 + b\left\{-\displaystyle\frac{b}{2a}\right\} + c = -\frac{b^2}{4a}+c=-\frac{b^2-4ac}{4a}=-\frac{\Delta}{4a}$$
+O valor $\Delta=b^2-4ac$ é chamado de *discriminante*.
+
+O par ordenado $V=(-\displaystyle\frac{b}{2a}\ ,\ -\frac{b^2}{4a}+c)=(-\displaystyle\frac{b}{2a}\ ,\ -\frac{\Delta}{4a})$ é chamado *vértice da parábola*.
 
 Observar que $D_f=\mathbb{R}$. Além disso:
 
-- Se $a>0$, então $Im_f=\{y\in\mathbb{R}\ :\ y\geq -\displaystyle\frac{b^2}{4a}+c\}$.
+- Se $a>0$, então $Im_f=\{y\in\mathbb{R}\ :\ y\geq -\displaystyle\frac{\Delta}{4a}\}$.
 <br>
 
-- Se $a<0$, então $Im_f=\{y\in\mathbb{R}\ :\ y\leq -\displaystyle\frac{b^2}{4a}+c\}$.
+- Se $a<0$, então $Im_f=\{y\in\mathbb{R}\ :\ y\leq -\displaystyle\frac{\Delta}{4a}\}$.
 
 Para achar os zeros de uma função quadrática, observemos que 
 
-$$ax^2+bx+c=0\ \Longrightarrow\ x=\displaystyle\frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
-
-A quantidade $\Delta=b^2-4ac$ dentro da raiz é chamado *discriminante*. O valor de $\Delta$ permite "discriminar" entre os seguintes casos:
+$$ax^2+bx+c=0\ \Longrightarrow\ x=\displaystyle\frac{-b \pm \sqrt{b^2-4ac}}{2a}=\frac{-b\pm \sqrt{\Delta}}{2a}$$
+O valor de $\Delta$ permite "discriminar" entre os seguintes casos:
 
 - Se $\Delta>0$, então a função quadrática tem exatamente duas raíces reais.
 - Se $\Delta=0$, então a função quadrática tem exatamente uma raiz real.
 - Se $\Delta<0$, então a função quadrática não tem raíces reais.
 
-As três situações são ilustradas no seguinte gráfico.
+As três situações são ilustradas no seguinte gráfico quando $a>0$.
 
 &nbsp;
 
@@ -432,7 +433,7 @@ knitr::include_graphics('func24.png')
 
 Para fazer uma análise do sinal da função quadrática $f(x)=ax^2 +bx +c$, devemos considerar o sinal do discriminante $\Delta$ e da constante $a$. Assim, temos seis casos possíveis:
 
-- Se $\Delta>0$, então temos duas raíçes reais e distintas, digamos $x_1$ e $x_2$, sendo $x_1<x_2$ e $f(x_1)=f(x_2)=0$. Nesse caso, temos duas situações: se $a>0$, temos que $f(x)>0$ para $x<x_1$ ou $x>x_2$ e $f(x)<0$ para $x_1<x<x_2$. Se $a<0$, então $f(x)<0$ para $x<x_1$ ou $x>x_2$ e $f(x)>0$ para $x_1<x<x_2$.
+- Se $\Delta>0$, então temos duas raíçes reais e distintas, digamos $x_1$ e $x_2$, sendo $x_1<x_2$ e $f(x_1)=f(x_2)=0$. Nesse caso, temos duas situações: se $a>0$, temos que $f(x)>0$ para $x<x_1$ e $x>x_2$, e $f(x)<0$ para $x_1<x<x_2$. Se $a<0$, então $f(x)<0$ para $x<x_1$ e $x>x_2$, e $f(x)>0$ para $x_1<x<x_2$.
 - Se $\Delta=0$, então temos uma única raíz real $x_1$, sendo $f(x_1)=0$. Assim temos que se $a>0$, então $f(x)>0$ para todo $x\neq x_1$. Se $a<0$, então $f(x)<0$ para todo $x\neq x_1$.
 - $\Delta<0$, então não existem raíçes reais. Portanto, se $a>0$, então $f(x)>0$ para todo $x$. Se $a<0$, então $f(x)<0$ para todo $x$.
 
@@ -446,7 +447,49 @@ knitr::include_graphics('func27.png')
 
 &nbsp;
 
-## Função Modular
+### Função $f(x)=x^3$
+
+Consideremos a função $f(x)=x^3$, cuja gráfica é apresentada a seguir:
+
+&nbsp;
+
+```{r cubic, echo=FALSE, fig.cap="", out.width='55%', fig.align=""}
+knitr::include_graphics('cubic.png')
+```
+
+&nbsp;
+
+Temos que $D_f=\mathbb{R}$. Além disso, $Im_f={R}$, pois dado $y\in\mathbb{R}$, existe $x=\sqrt[3]{y}$ tal que $f(x)=f(\sqrt[3]{y})=(\sqrt[3]{y})^3=y$.
+
+O zero da função é $x=0$.
+
+Onservar que $f(x)=x^3$ é uma função crescente, ou seja
+
+$$\mbox{Se }\ x_1<x_2\ \Longrightarrow\ x_1^3<x_2^3$$
+
+### Função recíproca
+
+A função recíproca é definida por 
+
+$$f(x)=\frac{1}{x}$$
+
+Observar que $D_f=\{x\in\mathbb{R}\ :\ x\neq0\}=\mathbb{R}-\{0\}$, pois a função não está definida em $x=0$.
+A imagem é $Im_f=\mathbb{R}-\{0\}$, pois não existe $x\in D_f$ tal que $f(x)=0$.
+
+Se $x_1<x_2<0$, então $\displaystyle\frac{1}{x_2}<\frac{1}{x_1}<0$. Se $0<x_1<x_2$, então $0<\displaystyle\frac{1}{x_2}<\frac{1}{x_1}$. Portanto, a função recíproca é decrescente.
+
+A função tem por gráfico uma hipérbole equilátera.
+
+&nbsp;
+
+```{r reciproca, echo=FALSE, fig.cap="", out.width='55%', fig.align=""}
+knitr::include_graphics('reciproca.png')
+```
+
+&nbsp;
+
+
+### Função Modular
 
 Dado um número real $x$, definimos o módulo (ou valor absoluto) de $x$ como
 
@@ -457,13 +500,21 @@ Assim, por exemplo, $|\,5\,|=5$ e $|\,-3\,|=3$.
 Da definição de módulo decorrem as seguintes propriedades:
 
 1. $|\,x\,|\geq0$, $\forall x\in\mathbb{R}$
+
 2. $|\,x\,|=0\ \Leftrightarrow\ x=0$
+
 3. $|\,x\cdot y\,|=|\,x\,|\cdot|\,y\,|$, $\forall x,y\in\mathbb{R}$
+
 4. $|\,x\,|^2=x^2$, $\forall x\in\mathbb{R}$
+
 5. $x\leq|\,x\,|$, $\forall x\in\mathbb{R}$
+
 6. $|\,x+y\,|\leq |\,x\,|+|\,y\,|$, $\forall x,y\in\mathbb{R}$ (desigualdade triangular)
+
 7. $|\,x-y\,|\geq |\,x\,|-|\,y\,|$, $\forall x,y\in\mathbb{R}$
-8. $|x|\leq a$\ e \ $a>0\ \Leftrightarrow\ -a\leq x\leq a$  
+
+8. $|x|\leq a$\ e \ $a>0\ \Leftrightarrow\ -a\leq x\leq a$ 
+
 9. $|\,x\,|\geq a$\ e \ $a>0\ \Leftrightarrow\ x\leq -a$\  ou\ $x\geq a$
 
 Definimos a função modular como sendo a função $f:\mathbb{R}\longrightarrow\mathbb{R}$ dada por $f(x)=|\,x\,|,\ x\in\mathbb{R}$.
@@ -644,3 +695,42 @@ knitr::include_graphics('ineq02.png')
 ```
 
 &nbsp;
+
+Exemplo 5: Resolver $|\,2x-6\,|-|\,x\,|\leq 4-x$
+
+Observar que 
+
+$$|\,2x-6\,|=2x-6\ \mbox{ se }\ x\geq 3, \quad |\,2x-6\,|=-2x+6\ \mbox{ se }\ x<3$$
+
+$$|\,x\,|=x\ \mbox{ se }\ x\geq0, \quad |\,x\,|=-x\ \mbox{ se }\ x<0$$
+
+&nbsp;
+
+```{r ineq03, echo=FALSE, fig.cap="", out.width='80%', fig.align=""}
+knitr::include_graphics('ineq03.png')
+```
+
+&nbsp;
+
+1º) Se $x\geq3$, então 
+
+$$|\,2x-6\,|-|\,x\,|\leq 4-x\ \Longleftrightarrow\ x-6\leq4-x\ \Longleftrightarrow\ x\leq5$$
+
+Nesse caso, o conjunto solução é dado por
+
+$$S_1=[3,+\infty)\cap(-\infty,5]=[3,5]$$
+
+2º) Se $0\leq x<3$, então
+
+$$|\,2x-6\,|-|\,x\,|\leq 4-x\ \Longleftrightarrow\ -3x+6\leq 4-x\ \Longleftrightarrow\ x\geq1$$
+Nesse caso, o conjunto solução é dado por
+
+$$S_2=[0,3)\cap[1,+\infty)=[1,3)$$
+3º) Se $x<0$, então
+
+$$|\,2x-6\,|-|\,x\,|\leq 4-x\ \Longleftrightarrow\ -x+6\leq 4-x\ \Longleftrightarrow\ 6\leq4$$
+o qual é um absurdo. Nesse caso, o conjunto solução é $S_3=\emptyset$.
+
+Assim, temos que o conjunto solução da inequação $|\,2x-6\,|-|\,x\,|\leq 4-x$ é dado por
+
+$$S=S_1\cup S_2\cup S_3=[3,5]\cup[1,3)\cup\emptyset=[1,5]$$
