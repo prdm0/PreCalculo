@@ -774,6 +774,11 @@ Sejam os polinômios $p(x)$ e $g(x)$, em que o grau de $p(x)$ é maior ou igual 
 $$p(x) = q(x)\,g(x) + r(x)$$
 em que $q(x)$ é o quociente e $r(x)$ é o resto, tal que o grau de $r(x)$ é menor do que o grau de $g(x)$.
 
+O polinômio $p(x)$ é *divisível* pelo polinômio $g(x)$ se $r(x)=0$, ou seja,
+
+$$p(x) \ \mbox{ é divisível por }\ g(x)\ \Longleftrightarrow \mbox{ existe }  q(x)  \mbox{ tal que }\ p(x)=q(x)\,g(x)$$
+
+
 #### Algoritmo de Briot-Ruffini
 
 O algoritmo de Briot-Ruffini é utilizado para dividir um polinômio $p(x)=a_0+a_1x+\cdots+a_nx^n$ por um polinômio da forma $g(x)=x - b$, que consiste em efetuar a divisão fazendo cálculos apenas com os coeficientes.
@@ -848,6 +853,29 @@ knitr::include_graphics('algoritmo06.png')
 Assim, obtemos que o resto da divisão é $2$ e o polinômio quociente é $x^2+2x$. Portanto, temos que 
 
 $$x^3-4x+2 = (x^2+2x)(x-2) + 2$$
+
+#### Achando as raizes de um polinômio
+
+Suponha que $x=b$ é uma raiz do polinômio $p(x)$. Então, pode-se provar que o polinômio $p(x)$ é divisível pelo polinômio $x-b$. Assim, para achar otras raizes do polinômio $p(x)$, é de interesse  fazer a divisão de $p(x)$ por $x-b$. 
+
+Exemplo: Seja $p(x)=x^3-x^2-4x+4$. Achar as raizes de $p(x)$.
+
+Observar que $x=1$ é uma raiz de $p(x)$. Dessa forma, temos que o polinômio $p(x)$ é divisível por $x-1$.
+
+Fazemos a divisão usando o algoritmo de Briot-Ruffini:
+
+&nbsp;
+
+```{r algoritmo07, echo=FALSE, fig.cap="", out.width='50%', fig.align=""}
+knitr::include_graphics('algoritmo07.png')
+```
+
+&nbsp;
+
+Assim, temos que $r(x)=0$ e $q(x)=x^2-4$. Portanto
+
+$$p(x) = x^3-x^2-4x+4 = (x^2-4)(x-1) = (x+2)(x-2)(x-1)$$
+Concluimos que as raizes de $p(x)$ são $x=1$, $x=2$ e $x=-2$.
 
 ## Fatoração
 

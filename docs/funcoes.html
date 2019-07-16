@@ -602,6 +602,8 @@ em que <span class="math inline">\(n\in\mathbb{N}\)</span> e <span class="math i
 <p>Sejam os polinômios <span class="math inline">\(p(x)\)</span> e <span class="math inline">\(g(x)\)</span>, em que o grau de <span class="math inline">\(p(x)\)</span> é maior ou igual ao grau de <span class="math inline">\(g(x)\)</span>. Então, existem únicos polinômios <span class="math inline">\(r(x)\)</span> e <span class="math inline">\(q(x)\)</span> tais que</p>
 <p><span class="math display">\[p(x) = q(x)\,g(x) + r(x)\]</span>
 em que <span class="math inline">\(q(x)\)</span> é o quociente e <span class="math inline">\(r(x)\)</span> é o resto, tal que o grau de <span class="math inline">\(r(x)\)</span> é menor do que o grau de <span class="math inline">\(g(x)\)</span>.</p>
+<p>O polinômio <span class="math inline">\(p(x)\)</span> é <em>divisível</em> pelo polinômio <span class="math inline">\(g(x)\)</span> se <span class="math inline">\(r(x)=0\)</span>, ou seja,</p>
+<p><span class="math display">\[p(x) \ \mbox{ é divisível por }\ g(x)\ \Longleftrightarrow \mbox{ existe }  q(x)  \mbox{ tal que }\ p(x)=q(x)\,g(x)\]</span></p>
 <div id="algoritmo-de-briot-ruffini" class="section level4">
 <h4><span class="header-section-number">2.12.3.1</span> Algoritmo de Briot-Ruffini</h4>
 <p>O algoritmo de Briot-Ruffini é utilizado para dividir um polinômio <span class="math inline">\(p(x)=a_0+a_1x+\cdots+a_nx^n\)</span> por um polinômio da forma <span class="math inline">\(g(x)=x - b\)</span>, que consiste em efetuar a divisão fazendo cálculos apenas com os coeficientes.</p>
@@ -634,6 +636,19 @@ em que <span class="math inline">\(q(x)\)</span> é o quociente e <span class="m
 <p> </p>
 <p>Assim, obtemos que o resto da divisão é <span class="math inline">\(2\)</span> e o polinômio quociente é <span class="math inline">\(x^2+2x\)</span>. Portanto, temos que</p>
 <p><span class="math display">\[x^3-4x+2 = (x^2+2x)(x-2) + 2\]</span></p>
+</div>
+<div id="achando-as-raizes-de-um-polinomio" class="section level4">
+<h4><span class="header-section-number">2.12.3.2</span> Achando as raizes de um polinômio</h4>
+<p>Suponha que <span class="math inline">\(x=b\)</span> é uma raiz do polinômio <span class="math inline">\(p(x)\)</span>. Então, pode-se provar que o polinômio <span class="math inline">\(p(x)\)</span> é divisível pelo polinômio <span class="math inline">\(x-b\)</span>. Assim, para achar otras raizes do polinômio <span class="math inline">\(p(x)\)</span>, é de interesse fazer a divisão de <span class="math inline">\(p(x)\)</span> por <span class="math inline">\(x-b\)</span>.</p>
+<p>Exemplo: Seja <span class="math inline">\(p(x)=x^3-x^2-4x+4\)</span>. Achar as raizes de <span class="math inline">\(p(x)\)</span>.</p>
+<p>Observar que <span class="math inline">\(x=1\)</span> é uma raiz de <span class="math inline">\(p(x)\)</span>. Dessa forma, temos que o polinômio <span class="math inline">\(p(x)\)</span> é divisível por <span class="math inline">\(x-1\)</span>.</p>
+<p>Fazemos a divisão usando o algoritmo de Briot-Ruffini:</p>
+<p> </p>
+<p><img src="algoritmo07.png" width="50%" /></p>
+<p> </p>
+<p>Assim, temos que <span class="math inline">\(r(x)=0\)</span> e <span class="math inline">\(q(x)=x^2-4\)</span>. Portanto</p>
+<p><span class="math display">\[p(x) = x^3-x^2-4x+4 = (x^2-4)(x-1) = (x+2)(x-2)(x-1)\]</span>
+Concluimos que as raizes de <span class="math inline">\(p(x)\)</span> são <span class="math inline">\(x=1\)</span>, <span class="math inline">\(x=2\)</span> e <span class="math inline">\(x=-2\)</span>.</p>
 </div>
 </div>
 </div>
